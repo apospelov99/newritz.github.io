@@ -62,7 +62,7 @@
 						<a class="nav-link develop_link" href="company.html">company</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link develop_link" href="contact.html">contact</a>
+						<a class="nav-link develop_link" href="contactpage.html">contact</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link develop_link" href="partners.html">partners</a>
@@ -105,8 +105,8 @@
 			<div class="col-md-3">
 				<div class="row develop_badge">
 					<span class="badge badge-success develop_link-badge">last update</span>	
-					<span class="badge badge-danger develop_link-badge">18:12</span>
-					<span class="badge badge-primary develop_link-badge">V-026</span>
+					<span class="badge badge-danger develop_link-badge">19:07</span>
+					<span class="badge badge-primary develop_link-badge">V-027</span>
 					</div>
 				</div>
 		</div>
@@ -202,7 +202,7 @@
   
   
     
-    <!-- company -->
+    <!-- contactpage -->
     <div class="container-fluid contactpage">
       <!-- mainnav -->
       <div class="mainnav">
@@ -215,56 +215,62 @@
           </ol><!-- mainnav_body END -->
         </div><!-- mainnav_block END-->
       </div><!-- mainnav END -->
+      <!-- contactpage_top -->
       <div class="container contactpage_top">
         <h1 class="contactpage_title">Контакты</h1>
-      </div>
+      </div><!-- contactpage_top END -->
       <!-- map -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19211.01063436335!2d84.9514357667292!3d56.50097286127342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x432693741c785ab9%3A0xe92a1a5e851ac1f6!2z0KDQmNCi0KYsINCg0LXQs9C40L7QvdCw0LvRjNC90YvQuSDQmNC90L3QvtCy0LDRhtC40L7QvdC90L4t0KLQtdGF0L3QvtC70L7Qs9C40YfQtdGB0LrQuNC5INCm0LXQvdGC0YA!5e0!3m2!1sru!2sru!4v1502967275196" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       <!-- map END -->
       <!-- contactpage_body -->
-      <div class="container contactpage_body">
-        <div class="row">
-          <div class="col-lg-5 test">
-            <!-- contactcards -->
-            <div class="contactcards">
-              <div class="row contactcards_row">
-                <div class="col-xs-3 contactcards_customer">
-                  <p class="contactcards_text-bold">Адрес:</p>
+      <div class="container-fluid contactpage_body">
+        <!-- contactpage_contactcards -->
+        <div class="container contactpage_contactcards">
+          <!-- row -->
+          <div class="row">
+            <div class="col-lg-5 test">
+              <!-- contactcards -->
+              <div class="contactcards">
+                <div class="row contactcards_row">
+                  <div class="col-xs-3 contactcards_customer">
+                    <p class="contactcards_text-bold">Адрес:</p>
+                  </div>
+                  <div class="col-xs-9 contactcards_data">
+                    <p class="contactcards_text">г. Томск, Кузовлевский тракт 6/2</p>
+                  </div>
                 </div>
-                <div class="col-xs-9 contactcards_data">
-                  <p class="contactcards_text">г. Томск, Кузовлевский тракт 6/2</p>
+                <div class="row contactcards_row">
+                  <div class="col-xs-3 contactcards_target">
+                    <p class="contactcards_text-bold">Телефон:</p>
+                  </div>
+                  <div class="col-xs-9 contactcards_data">
+                    <p class="contactcards_text">8 800 600 88 22</p>
+                  </div>
                 </div>
-              </div>
-              <div class="row contactcards_row">
-                <div class="col-xs-3 contactcards_target">
-                  <p class="contactcards_text-bold">Телефон:</p>
+                <div class="row contactcards_row">
+                  <div class="col-xs-3 contactcards_time">
+                    <p class="contactcards_text-bold">E-mail:</p>
+                  </div>
+                  <div class="col-xs-9 contactcards_data">
+                    <p class="contactcards_text">info@ritz.ru</p>
+                  </div>
                 </div>
-                <div class="col-xs-9 contactcards_data">
-                  <p class="contactcards_text">8 800 600 88 22</p>
-                </div>
-              </div>
-              <div class="row contactcards_row">
-                <div class="col-xs-3 contactcards_time">
-                  <p class="contactcards_text-bold">E-mail:</p>
-                </div>
-                <div class="col-xs-9 contactcards_data">
-                  <p class="contactcards_text">info@ritz.ru</p>
-                </div>
-              </div>
-            </div><!-- contactcards END -->
-          </div>
-          <div class="col-lg-6 col-lg-offset-1">
-            <div class="contactform">
-              <h3 class="contactform_title">Oстались вопросы? свяжитель с нами!</h3>
-              <input id="contactform_name"    type="text" class="form-control" name="contactform_name"    placeholder="ФИО">
-              <input id="contactform_phone"   type="text" class="form-control" name="contactform_phone"   placeholder="ТЕЛЕФОН">
-              <input id="contactform_message" type="text" class="form-control" name="contactform_message" placeholder="СООБЩЕНИЕ">
-              <button class="btn contactform_btn">Отправить</button>
+              </div><!-- contactcards END -->
             </div>
-          </div>
-        </div>
+            <div class="col-lg-5 col-lg-offset-1">
+              <!-- contactform -->
+              <div class="contactform">
+                <h3 class="contactform_title">Oстались вопросы? свяжитель с нами!</h3>
+                <input id="contactform_name"    type="text" class="form-control contactform_input" name="contactform_input-name"    placeholder="ФИО">
+                <input id="contactform_phone"   type="text" class="form-control contactform_input" name="contactform_input-phone"   placeholder="ТЕЛЕФОН">
+                <input id="contactform_message" type="text" class="form-control contactform_input" name="contactform_input-message" placeholder="СООБЩЕНИЕ">
+                <button class="btn contactform_btn">Отправить</button>
+              </div><!-- contactform END -->
+            </div>
+          </div><!-- row END -->
+        </div><!-- contactpage_contactcards END -->
       </div><!-- contactpage_body END -->
-    </div><!-- company END -->
+    </div><!-- contactpage END -->
 
   
     
