@@ -56,15 +56,42 @@
           </div>
           <div class="col-lg-2">
             <div class="slider_control-executives">
-              <button class="btn"><img src="" alt=""><</button>
-              <button class="btn"><img src="" alt="">></button>
+              <button class="btn control_next-executives"><img src="img\company\с_slider_left.png" alt=""></button>
+              <button class="btn control_prev-executives"><img src="img\company\с_slider_right.png" alt=""></button>
             </div>
           </div>
         </div><!-- executives_top END -->
         <!-- slider_executives -->
-        <div class="slider_executives">
+        <div class="slider_executives-wrap">
           <!-- row -->
-          <div class="row">
+          <div class="row slider_executives">
+            <div class="col-lg-4">
+              <div class="executive_profile">
+                <img src="img\company\c_chief1.png" alt="" class="profile_img">
+                <p class="profile_name">Иванов Иван Иванович</p>
+                <p class="profile_position">Самый главный на заводе</p>
+                <p class="profile_phone">8 (3822) 44-55-66</p>
+                <p class="profile_email">mailgod@ritz.ru</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="executive_profile">
+                <img src="img\company\c_chief2.png" alt="" class="profile_img">
+                <p class="profile_name">Псков Никита Андреевич</p>
+                <p class="profile_position">Маркетолог</p>
+                <p class="profile_phone">8 (3822) 12-16-68</p>
+                <p class="profile_email">mail@ritz.ru</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="executive_profile">
+                <img src="img\company\c_chief3.png" alt="" class="profile_img">
+                <p class="profile_name">Прокуров Илья Викторович</p>
+                <p class="profile_position">Бухгалтер</p>
+                <p class="profile_phone">8 (3822) 17-19-64</p>
+                <p class="profile_email">mailgod@ritz.ru</p>
+              </div>
+            </div>
             <div class="col-lg-4">
               <div class="executive_profile">
                 <img src="img\company\c_chief1.png" alt="" class="profile_img">
@@ -112,7 +139,15 @@
             </div>
           </div>
           <div class="col-lg-12 history_timeline">
-            <p>< -----------------1984---------------------------1991--------------------------2001---------------------------2005---------------------------2008---------------------------2011--------------------2017 ></p>
+            <ul class="history_timeline-ul">
+              <li class="history_timeline-li">1984</li>
+              <li class="history_timeline-li">1991</li>
+              <li class="history_timeline-li">2001</li>
+              <li class="history_timeline-li">2005</li>
+              <li class="history_timeline-li active">2008</li>
+              <li class="history_timeline-li">2011</li>
+              <li class="history_timeline-li">2017</li>
+            </ul>
           </div>          
         </div><!-- history_block END -->
       </div><!-- company_history END -->
@@ -207,7 +242,7 @@
                 <img src="img\company\c_icon_detail.png" alt="" class="deriction_img">
               </div>
               <div class="col-xs-9">
-                <p class="direction_text">2Изготавливаем сварочные автоматы для сварки и наплавки в среде углекислого газа и под флюсом.</p>
+                <p class="direction_text">Изготавливаем сварочные автоматы для сварки и наплавки в среде углекислого газа и под флюсом.</p>
               </div>
             </div>
           </div><!-- direction_thumbnail END -->
@@ -218,7 +253,7 @@
         <!-- container -->
         <div class="container">
           <!-- row -->
-          <div class="row company_topwrap">
+          <div class="row company_topwrap projects_top">
             <div class="col-lg-3">
               <p class="section_count">05</p>
             </div>
@@ -230,14 +265,14 @@
               </div>
             </div>
             <div class="col-lg-2">
-              <div class="slider_control-executives">
-                <button class="btn"><img src="" alt=""><</button>
-                <button class="btn"><img src="" alt="">></button>
+              <div class="slider_control-projects">
+                <button id="control_next-projects" class="btn control_next-projects"><img src="img\company\с_slider_left.png" alt=""></button>
+                <button id="control_prev-projects" class="btn control_prev-projects"><img src="img\company\с_slider_right.png" alt=""></button>
               </div>
             </div>
           </div><!-- row END -->
           <!-- projects_gallery -->
-          <div class="row projects_gallery-company">
+          <div class="row slider_projects projects_gallery-company">
             <div class="col-lg-4 gallery_col">
               <img src="img/index/projects_1.jpg" alt="" class="project_img img-responsive">
               <div class="project_link">
@@ -256,7 +291,6 @@
                 <p class="project_description">Стальной резервуар для хранения нефтепродуктов<i class="icon_arrow"></i></p>
               </div>	
             </div>
-            <!--
             <div class="col-lg-4 gallery_col">
               <img src="img/index/projects_5.jpg" alt="" class="project_img img-responsive">
               <div class="project_link">
@@ -275,7 +309,6 @@
                 <p class="project_description">Индивидуальный тепловой пункт (Сыктывкар)<i class="icon_arrow"></i></p>
               </div>	
             </div>
-            -->
           </div><!-- projects_gallery END -->
         </div><!-- container END -->
       </div><!-- company_projects END -->
@@ -295,28 +328,44 @@
                 <p class="box_text">На станки патент имеется, на работников, на всё, всё производство. Даже можно сказать, что сложно найти на нашем заводе что-либо не имеющее этого самого патента.</p>
               </div>
             </div>
-            <div class="col-lg-2">
-              <div class="slider_control-executives">
-                <button class="btn"><img src="" alt=""><</button>
-                <button class="btn"><img src="" alt="">></button>
-              </div>
+            <div class="col-lg-2 slider_control-patents">
+              <button class="btn control_next-patents"><img src="img\company\с_slider_left.png" alt=""></button>
+              <button class="btn control_prev-patents"><img src="img\company\с_slider_right.png" alt=""></button>
             </div>
           </div><!-- row END -->
           <!-- slider_patents -->
-          <div class="slider_patents">
+          <div class="slider_patents-wrap">
             <!-- row -->
-            <div class="row">
+            <div class="row slider_patents">
               <div class="col-lg-3">
                 <img src="img\company\c_patents_1920_1.jpg" alt="" class="patents_img">
+              </div>
+              <div class="col-lg-3">
+                <img src="img\company\c_response_1920_1.jpg" alt="" class="patents_img">
               </div>
               <div class="col-lg-3">
                 <img src="img\company\c_patents_1920_1.jpg" alt="" class="patents_img">
               </div>
               <div class="col-lg-3">
-                <img src="img\company\c_patents_1920_1.jpg" alt="" class="patents_img">
+                <img src="img\company\c_response_1920_1.jpg" alt="" class="patents_img">
               </div>
               <div class="col-lg-3">
                 <img src="img\company\c_patents_1920_1.jpg" alt="" class="patents_img">
+              </div>
+              <div class="col-lg-3">
+                <img src="img\company\c_response_1920_1.jpg" alt="" class="patents_img">
+              </div>
+              <div class="col-lg-3">
+                <img src="img\company\c_patents_1920_1.jpg" alt="" class="patents_img">
+              </div>
+              <div class="col-lg-3">
+                <img src="img\company\c_response_1920_1.jpg" alt="" class="patents_img">
+              </div>
+              <div class="col-lg-3">
+                <img src="img\company\c_patents_1920_1.jpg" alt="" class="patents_img">
+              </div>
+              <div class="col-lg-3">
+                <img src="img\company\c_response_1920_1.jpg" alt="" class="patents_img">
               </div>
             </div><!-- row END -->
           </div><!-- slider_patents END -->   
@@ -327,7 +376,7 @@
         <!-- container -->
         <div class="container resposnse_block">
           <!-- row -->
-          <div class="row company_topwrap">
+          <div class="row company_topwrap resposnse_top">
             <div class="col-lg-3">
               <p class="section_count">07</p>
             </div>
@@ -335,22 +384,44 @@
               <h2 class="section_title response_maintitle">Отзывы</h2>
               <div class="company_box">
                 <h3 class="box_title">Отзывы исключительно положительные</h3>
-                <p class="box_text">Ведь когда компания так прекрасно справляется со своей работой, иначе быть и не может. Наши клиенты счастливые люди, посмотрите сами, что они о нас пишут на бумаге.</p>
+                <p class="box_text">Ведь когда компания так прекрасно справляется со своей работой, иначе быть и не может. Наши клиенты счастливые люди, посмотрите сами, что они о нас пишут на бумаге.</p>
               </div>
             </div>
           </div><!-- row END -->
           <!-- row -->
-          <div class="row">
-            <div class="col-lg-3">
+          <div class="row resposnse_body">
+            <div class="col-lg-3 response_img-wrap">
               <img src="img\company\c_response_1920_1.jpg" alt="" class="response_img">
+              <img src="img\company\c_patents_1920_1.jpg" alt="" class="response_img">
+              <img src="img\company\c_response_1920_1.jpg" alt="" class="response_img">
+              <img src="img\company\c_patents_1920_1.jpg" alt="" class="response_img">
             </div>
-            <div class="col-lg-8">
-              <h4 class="response_title">Xолдинговая компания новотранс</h4>
-              <p class="response_date">29.06.2015</p>
-              <p class="response_text">Центр располагает необходимыми производственными площадями, хорошим литейным участком, станочным оборудованием, квалифицированными кадрами и многолетним разносторонним опытом в области инноваций и разнообразных защитных и упрочняющих покрытий. Большая часть собственных разработок защищена патентами, зарегистрированы товарные знаки.</p>
-              <div class="slider_control-executives">
-                <button class="btn"><img src="" alt=""><</button>
-                <button class="btn"><img src="" alt="">></button>
+            <div class="col-lg-8 slider_response-wrap">
+              <div class="slider_response">
+                <div class="response_item">
+                  <h4 class="response_title">Xолдинговая компания новотранс</h4>
+                  <p class="response_date">29.06.2015</p>
+                  <p class="response_text">Центр располагает необходимыми производственными площадями, хорошим литейным участком, станочным оборудованием, квалифицированными кадрами и многолетним разносторонним опытом в области инноваций и разнообразных защитных и упрочняющих покрытий. Большая часть собственных разработок защищена патентами, зарегистрированы товарные знаки.</p>
+                </div>
+                <div class="response_item">
+                  <h4 class="response_title">компания трансново</h4>
+                  <p class="response_date">15.08.2015</p>
+                  <p class="response_text">Большая часть собственных разработок защищена патентами, зарегистрированы товарные знаки. Центр располагает необходимыми производственными площадями, хорошим литейным участком, станочным оборудованием, квалифицированными кадрами и многолетним разносторонним опытом в области инноваций и разнообразных защитных и упрочняющих покрытий.</p>
+                </div>
+                <div class="response_item">
+                  <h4 class="response_title">Xолдинговая компания супертранс</h4>
+                  <p class="response_date">04.03.2016</p>
+                  <p class="response_text">Центр располагает необходимыми производственными площадями, хорошим литейным участком, станочным оборудованием, квалифицированными кадрами и многолетним разносторонним опытом в области инноваций и разнообразных защитных и упрочняющих покрытий. Большая часть собственных разработок защищена патентами, зарегистрированы товарные знаки.</p>
+                </div>
+                <div class="response_item">
+                  <h4 class="response_title">компания гигатранс</h4>
+                  <p class="response_date">17.05.2016</p>
+                  <p class="response_text">Большая часть собственных разработок защищена патентами, зарегистрированы товарные знаки. Центр располагает необходимыми производственными площадями, хорошим литейным участком, станочным оборудованием, квалифицированными кадрами и многолетним разносторонним опытом в области инноваций и разнообразных защитных и упрочняющих покрытий.</p>
+                </div>
+              </div>
+              <div class="slider_control-response">
+                <button class="btn control_next-response"><img src="img\company\с_slider_left.png" alt=""></button>
+                <button class="btn control_prev-response"><img src="img\company\с_slider_right.png" alt=""></button>
               </div>
             </div>
           </div><!-- row END -->        
