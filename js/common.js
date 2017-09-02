@@ -113,6 +113,17 @@ $(function() {
     asNavFor: '.slider_response'
   });
   //slider projects_gallery-company END
+  //slider projects_gallery-company
+  
+  $(".slider_worker").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    //fade: true,
+    nextArrow: '.control_next-worker',
+    prevArrow: '.control_prev-worker',  
+  });
+  //slider projects_gallery-company END
 
 
 
