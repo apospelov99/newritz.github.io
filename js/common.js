@@ -1,7 +1,7 @@
 $(function() {
   //vacancy collapse
   $('.vacancy_click').on("click", function() {
-    $(this).toggleClass('orangelight');
+    $(this).toggleClass('vacancy_click-active');
 		$(this).closest('.vacancy_item').find('#demo')
 	})
   //vacancy collapse END
@@ -14,6 +14,7 @@ $(function() {
   $(".project_thumbnail .clientcards_gallery").matchHeight();
   $(".offer_col .offer_text").matchHeight();
   $(".thumbnail_wrap").matchHeight();
+  //$(".contacts_text-col").matchHeight();
   // equal height END
   
   
