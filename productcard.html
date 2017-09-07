@@ -68,7 +68,7 @@
 						<a class="nav-link develop_link success" href="partners.html">partners</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link develop_link" href="products.html">products</a>
+						<a class="nav-link develop_link success" href="products.html">products</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link develop_link" href="projectdetails.html">project details</a>
@@ -105,8 +105,8 @@
 			<div class="col-md-3">
 				<div class="row develop_badge">
 					<span class="badge badge-success develop_link-badge">last update</span>	
-					<span class="badge badge-danger develop_link-badge">05.09 14:23</span>
-					<span class="badge badge-primary develop_link-badge">V-047</span>
+					<span class="badge badge-danger develop_link-badge">07.09 15:17</span>
+					<span class="badge badge-primary develop_link-badge">V-048</span>
 					</div>
 				</div>
 		</div>
@@ -219,10 +219,10 @@
         <div class="container productcard_top">
           <h1 class="romb_title-small productcard_title">Oборудование для ремонта пассажирских вагонов </h1>
           <div class="row">
-            <div class="col-lg-6">
-              <img src="img/product_card/product_card_item_1920_1.jpg" alt="" class="img-responsive">
+            <div class="col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-5 col-lg-6 productcard_img-wrap">
+              <img src="img/product_card/product_card_item_1920_1.jpg" alt="" class="productcard_img img-responsive">
             </div>
-            <div class="col-lg-6 productcard_review">
+            <div class="col-sm-12 col-md-7 col-lg-6 productcard_review">
               <p class="productcard_text">Региональный инновационно технологичский центр предлагает создание участков "под ключ" (изготовление и поставка оборудования, расходуемых материалов; монтаж и запуск оборудования; обучение персонала, сервисное обслуживание в течении 12 месяцев) с передачей высокоэффективных ресурсосберегающих технологий.</p>
               <a href="" class="productcard_link">Смотреть характеристики...</a>
               <button class="btn productcard_btn">Узнать цену</button>
@@ -233,15 +233,15 @@
         <div class="container productcard_tabs">
           <!-- nav-tabs -->
           <ul class="nav nav-tabs nav-justified">
-            <li><a href="#" class="tabs_link-productcard">Характеристики</a></li>
-            <li><a href="#" class="tabs_link-productcard">Комплект поставки</a></li>
-            <li><a href="#" class="tabs_link-productcard">Документы</a></li>
-            <li><a href="#" class="tabs_link-productcard">Доставка</a></li>
-            <li><a href="#" class="tabs_link-productcard">Оплата</a></li>
+            <li><a href="#worktype_lathe" data-toggle="tab" class="tabs_link-productcard">Характеристики</a></li>
+            <li><a href="#worktype_estimate" data-toggle="tab" class="tabs_link-productcard">Комплект поставки</a></li>
+            <li><a href="#" data-toggle="tab" class="tabs_link-productcard">Документы</a></li>
+            <li><a href="#" data-toggle="tab" class="tabs_link-productcard">Доставка</a></li>
+            <li><a href="#" data-toggle="tab" class="tabs_link-productcard">Оплата</a></li>
           </ul><!-- nav-tabs END -->
           <!-- tab-content -->
           <div class="tab-content">
-            <div id="worktype_lathe" class="tab-pane fade in active">
+            <div id="worktype_lathe" class="tab-pane fade worktype_lathe">
               <table class="table table-bordered">
                 <thead>
                   <tr>
@@ -284,7 +284,73 @@
                 </tbody>
               </table>
             </div>
-            <div id="worktype_estimate" class="tab-pane fade">
+            <div id="worktype_estimate" class="tab-pane fade in active worktype_estimate">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>НАИМЕНОВАНИЕ</th>
+                    <th>КОЛ-ВО ШТУК</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Установка приготовления гидрата окиси бария </td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Установка регенерации электролита</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Дозатор электролита</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Бак-накопитель электролита подлежащего регенерации</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Установка доводки электролита</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Установка розлива электролита</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Бак для технической воды</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Дистиллятор электрический А 2029.00.00</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Монтажный комплект в составе</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Указатель прозрачности электролита</td>
+                    <td>500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="worktype_documents" class="tab-pane fade worktype_documents">
+              <a href="#" class="documents_file"><i class="icon_img">Схема участка</i></a><br>
+              <a href="#" class="documents_file"><i class="icon_pdf">Документ</i></a><br>
+              <a href="#" class="documents_file"><i class="icon_zip">Документ 2</i></a><br>
             </div>
           </div><!-- tab-content END -->
         </div><!-- servicedetails_tabs END -->       
@@ -334,9 +400,30 @@
 										</div>
 									</div>
 									<div class="col-sm-5 contacts_text-col emails-footer">
-										<p class="contacts_text-footer info">Общие вопросы:&nbsp<span>info@ritz.ru</span></p>
-										<p class="contacts_text-footer sales">Коммерческий отдел:&nbsp<span>sales@ritz.ru</span></p>
-										<p class="contacts_text-footer snab">Отдел поставок:&nbsp<span>snab@ritz.ru</span></p>
+										<div class="row">
+											<div class="col-xs-7 col-lg-6">
+												<p class="contacts_text-footer info">Общие вопросы:</p>
+											</div>
+											<div class="col-xs-5 col-lg-6">
+												<p class="contacts_text-footer info_date">info@ritz.ru</p>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-7 col-lg-6">
+												<p class="contacts_text-footer sales">Коммерческий отдел:</p>
+											</div>
+											<div class="col-xs-5 col-lg-6">
+												<p class="contacts_text-footer sales_date">sales@ritz.ru</p>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-7 col-lg-6">
+												<p class="contacts_text-footer snab">Отдел поставок:</p>
+											</div>
+											<div class="col-xs-5 col-lg-6">
+												<p class="contacts_text-footer snab_date">snab@ritz.ru</p>
+											</div>
+										</div>
 										<div class="contacts_link-wrap">
 											<a href="#" class="contacts_link-footer worktime_link">Часы работы</a>
 										</div>
