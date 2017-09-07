@@ -8,27 +8,50 @@ $(function() {
   //vacancy collapse END
   
   //products
-    $('.products_btn').on("click", function() {
-      $('.products_btn').removeClass('products_btn-active');
-      //$(this).toggleClass('products_btn-active');
+  $('.products_btn').on("click", function() {
+    $('.products_btn').removeClass('products_btn-active');
+    //$(this).toggleClass('products_btn-active');
+    var productFilter = $(this).attr('data-filter');   
+    
+    $('.filter').not('.' + productFilter).hide('3000');
+    
+    if (window.matchMedia('(min-width: 768px)').matches){
+      $('.filter').filter('.' + productFilter).show('1000');
+    } else {
+      $(this).after($('.filter'));
+      if ($('.filter').filter('.' + productFilter).is(':visible')) {
+        $(this).removeClass('products_btn-active');
+        $('.filter').filter('.' + productFilter).hide('1000');
+      } else {
+        $('.filter').filter('.' + productFilter).show('1000');
+        $(this).addClass('products_btn-active');  
+      }
+    }
+  });
+  //products END
+  
+  ///productcard
+    $('.productcard_pills').on("click", function() {
+      $('.productcard_pills').removeClass('productcard_pills-active');
       var productFilter = $(this).attr('data-filter');   
       
-      $('.filter').not('.' + productFilter).hide('3000');
+      $('.filter').not('.' + productFilter).addClass('filter_noactive');
       
       if (window.matchMedia('(min-width: 768px)').matches){
-        $('.filter').filter('.' + productFilter).show('1000');
+        $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
       } else {
         $(this).after($('.filter'));
         if ($('.filter').filter('.' + productFilter).is(':visible')) {
-          $(this).removeClass('products_btn-active');
-          $('.filter').filter('.' + productFilter).hide('1000');
+          $(this).removeClass('productcard_pills-active');
+          $('.filter').filter('.' + productFilter).addClass('filter_noactive');
         } else {
-          $('.filter').filter('.' + productFilter).show('1000');
-          $(this).addClass('products_btn-active');  
+          $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
+          $(this).addClass('productcard_pills-active');  
         }
       }
     });
-  //products END
+  ///productcard END
+
 
   //alert("Hello");
   // equal height
@@ -264,6 +287,32 @@ $('.press_list').slick({
   */
   //slider slider_worker END
 
+  $(".projectdetails_slider").slick({
+    rows: 1,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: '.control_next-projectdetails',
+    prevArrow: '.control_prev-projectdetails',
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          row: 1,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }, 
+      {
+        breakpoint: 768,
+        settings: {
+          row: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      } 
+    ]  
+  });
 
 
 
