@@ -84,6 +84,7 @@ $(function() {
   $(".offer_col .offer_text").matchHeight();
   $(".thumbnail_wrap").matchHeight();
   $(".presspage_thumbnail").matchHeight();
+  $(".footer .footer_col").matchHeight();
   //test
   $(".test55_col").matchHeight();
   //test
