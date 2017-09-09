@@ -51,6 +51,27 @@ $(function() {
       }
     });
   ///productcard END
+  ///servicedetails
+    $('.servicedetails_pills').on("click", function() {
+      $('.servicedetails_pills').removeClass('servicedetails_pills-active');
+      var productFilter = $(this).attr('data-filter');   
+      
+      $('.filter').not('.' + productFilter).addClass('filter_noactive');
+      
+      if (window.matchMedia('(min-width: 768px)').matches){
+        $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
+      } else {
+        $(this).after($('.filter'));
+        if ($('.filter').filter('.' + productFilter).is(':visible')) {
+          $(this).removeClass('servicedetails_pills-active');
+          $('.filter').filter('.' + productFilter).addClass('filter_noactive');
+        } else {
+          $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
+          $(this).addClass('servicedetails_pills-active');  
+        }
+      }
+    });
+  ///servicedetails END
 
 
   //alert("Hello");
@@ -63,7 +84,11 @@ $(function() {
   $(".offer_col .offer_text").matchHeight();
   $(".thumbnail_wrap").matchHeight();
   $(".presspage_thumbnail").matchHeight();
-  $(".presspage_thumbnail .presspage_textwrap").matchHeight();
+  //test
+  $(".test55_col").matchHeight();
+  //test
+  
+  //$(".header .header_col").matchHeight();
   //$(".press-col").matchHeight();
   //$(".contacts_text-col").matchHeight();
   // equal height END
