@@ -81,6 +81,7 @@ $(function() {
   $(".thumbnail_wrap").matchHeight();
   $(".presspage_thumbnail").matchHeight();
   $(".footer .footer_col").matchHeight();
+  $(".presscenter .press_testslider").matchHeight();
   // equal column height END 
   
   //slider press_list
@@ -101,6 +102,26 @@ $(function() {
     ]
   });
   */
+  $(".press_list").slick({
+    infinite: true,
+    rows: 3,
+    //slidesToShow: 3,
+    slidesToScroll: 1,
+    slidesPerRow: 1,
+    nextArrow: '.control_next-presscenter',
+    prevArrow: '.control_prev-presscenter',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          rows: 2,
+          slidesPerRow: 2,
+          slidesToScroll: 1,
+        }
+      }, 
+    ]  
+  });
+
   //slider press_list END
 
   //slider slider_executives
