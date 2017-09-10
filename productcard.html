@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<title>Title</title>
@@ -15,42 +14,25 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 	<!-- Template Basic Images END -->
-
 	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
 	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
-
 	<!-- Load Fonts CSS Start -->
 	<script>
 		loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
 		// loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
 	</script>
 	<!-- Load Fonts CSS END -->
-
 	<!-- Load Custom CSS Start -->
 	<script>loadCSS("css/main.min.css?ver=1.0.0", false, "all" );</script>
 	<!-- Load Custom CSS END -->
-
 	<!-- Load Custom CSS Compiled without JS Start -->
 	<noscript>
 		<link rel="stylesheet" href="css/fonts.min.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</noscript>
 	<!-- Load Custom CSS Compiled without JS END -->
-
-	<!-- Custom Browsers Color Start -->
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-	<!-- Custom Browsers Color END -->
-
 </head>
 <body>
-
-  
-
   <!-- develop -->
 	<div class="container develop">
 		<div class="row develop_pills">
@@ -58,12 +40,6 @@
 				<ul class="nav nav-pills develop_pills">
 					<li class="nav-item active">
 						<a class="nav-link develop_link" href="index.html">home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link develop_link" href="company.html">company</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link develop_link success" href="contactpage.html">contact</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link develop_link success" href="partners.html">partners</a>
@@ -81,6 +57,9 @@
 						<a class="nav-link develop_link success" href="productcard.html">product card</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link develop_link" href="company.html">company</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link develop_link success" href="services.html">services</a>
 					</li>
 					<li class="nav-item">
@@ -96,6 +75,9 @@
 						<a class="nav-link develop_link success" href="news.html">news</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link develop_link success" href="contactpage.html">contact</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link develop_link success" href="presscenter.html">press center</a>
 					</li>
 					<li class="nav-item">
@@ -106,304 +88,296 @@
 			<div class="col-md-3">
 				<div class="row develop_badge">
 					<span class="badge badge-success develop_link-badge">last update</span>	
-					<span class="badge badge-danger develop_link-badge">10.09 15:09</span>
-					<span class="badge badge-primary develop_link-badge">V-063</span>
+					<span class="badge badge-danger develop_link-badge">10.09 22:40</span>
+					<span class="badge badge-primary develop_link-badge">V-067</span>
 					</div>
 				</div>
 		</div>
 	</div><!-- develop END -->
-	
-  
-
-  
-      <!-- header -->
-      <div class="container-fluid header">
-        <div class="container header_block">
+  <!-- header -->
+  <div class="container-fluid header">
+    <div class="container header_block">
+      <div class="row">
+        <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 mainlogo header_col">
+          <img src="img/index/logo_RITZ.png" alt="" class="mainlogo_img">
+        </div>
+        <!-- col-lg-10 -->
+        <div class="col-xs-8 col-sm-10 col-md-10 col-lg-10">
+          <!-- row -->
           <div class="row">
-            <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 mainlogo header_col">
-              <img src="img/index/logo_RITZ.png" alt="" class="mainlogo_img">
-            </div>
-            <!-- col-lg-10 -->
-            <div class="col-xs-8 col-sm-10 col-md-10 col-lg-10">
-              <!-- row -->
+            <!-- col-lg-4 -->
+            <div class="col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-3 col-lg-4 header_col phones">
+              <!-- phone -->
+              <div class="row phone">
+                <div class="col-xs-4 col-sm-3 col-md-3 tel_wrap">
+                  <p class="contacts_text contacts_text-tel">тел.:</p>
+                </div>
+                <div class="col-xs-8 col-sm-9 col-md-9">
+                  <p class="contacts_date">8 800 900 88 22</p>
+                </div>
+              </div><!-- phone END -->
+              <!-- fax -->
+              <div class="row fax">
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                  <p class="contacts_text">факс.:</p>
+                </div>
+                <div class="col-xs-9 col-sm-9 col-md-9">
+                  <p class="contacts_date">8 800 900 88 22</p>
+                </div>
+              </div><!-- fax END -->
+              <a href="#" class="contacts_link">Заявка на консультацию</a>                  
+            </div><!-- col-lg-4 END -->
+            <!-- col-lg-4 -->
+            <div class="col-md-5 col-lg-4 emails">
               <div class="row">
-                <!-- col-lg-4 -->
-                <div class="col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-3 col-lg-4 header_col phones">
-                  <!-- phone -->
-                  <div class="row phone">
-                    <div class="col-xs-4 col-sm-3 col-md-3 tel_wrap">
-                      <p class="contacts_text contacts_text-tel">тел.:</p>
-                    </div>
-                    <div class="col-xs-8 col-sm-9 col-md-9">
-                      <p class="contacts_date">8 800 900 88 22</p>
-                    </div>
-                  </div><!-- phone END -->
-                  <!-- fax -->
-                  <div class="row fax">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <p class="contacts_text">факс.:</p>
-                    </div>
-                    <div class="col-xs-9 col-sm-9 col-md-9">
-                      <p class="contacts_date">8 800 900 88 22</p>
-                    </div>
-                  </div><!-- fax END -->
-                  <a href="#" class="contacts_link">Заявка на консультацию</a>                  
-                </div><!-- col-lg-4 END -->
-                <!-- col-lg-4 -->
-                <div class="col-md-5 col-lg-4 emails">
-                  <div class="row">
-                    <div class="col-xs-8 col-md-7">
-                      <p class="contacts_text">Общие вопросы:</p>
-                    </div> 
-                    <div class="col-xs-4 col-md-5">
-                      <p class="contacts_date">info@ritz.ru</p>
-                    </div> 
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-8 col-md-7">
-                      <p class="contacts_text">Коммерческий отдел:</p>
-                    </div> 
-                    <div class="col-xs-4 col-md-5">
-                      <p class="contacts_date">sales@ritz.ru</p>
-                    </div> 
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-8 col-md-7">
-                      <p class="contacts_text">Отдел поставок:</p>
-                    </div> 
-                    <div class="col-xs-4 col-md-5">
-                      <p class="contacts_date">snab@ritz.ru</p>
-                    </div> 
-                  </div>
-                </div><!-- col-lg-4 END-->
-                <!-- col-lg-4 -->
-                <div class="col-sm-6 col-md-4 col-lg-4 header_col adress">
-                  <p class="contacts_text"><span class="contacts_date">г. Томск, Кузовлевский тракт 6/2</span></p>
-                  <p class="contacts_text contacts_text-margin">Часы работы: <span class="contacts_text-worktime">Пн-Пт 9-18 ч. | Обед: 13-14</span></p>
-                  <a href="#" class="contacts_link">Как проехать?</a>
-                </div><!-- col-lg-4 END -->
-              </div><!-- row END -->
-            </div><!-- col-lg-10 END -->          
-          </div>
-        </div>
-        <!-- navbar -->	
-        <nav class="navbar header_navbar">
-          <!-- navbar_block -->
-          <div class="container navbar_block">
-            <!-- row -->
-            <div class="row navbar_row">
-              <!-- col-lg-10 -->
-              <div class="col-sm-6 col-md-9 col-lg-10">
-                <!-- navbar-header -->
-                <div class="navbar-header navbar_menu">
-                  <button class="navbar-toggle navbar_btn btn" data-toggle="collapse" data-target="#navbar_topmenu">меню                   
-                  </button>
-                </div><!-- navbar-header END -->
-                <!-- navbar_topmenu -->
-                <div class="collapse navbar-collapse navbar_topmenu" id="navbar_topmenu">
-                  <!-- topmenu -->
-                  <ul class="nav navbar-nav topmenu">
-                    <!-- topmenu_product -->
-                    <li class="topmenu_list">
-                      <a class="topmenu_link dropdown_title" data-toggle="dropdown" href="#">
-                        <span class="dropdown_title-text">Продукция</span>
-                      </a>
-                    </li><!-- topmenu_product END -->
-                    <li class="topmenu_list"><a href="#" class="topmenu_link aboutcompany_link">О компании</a></li>
-                    <li class="topmenu_list"><a href="#" class="topmenu_link guarantee_link">Гарантии</a></li>
-                    <li class="active topmenu_list"><a href="#" class="topmenu_link news_link">Новости</a></li>
-                    <li class="topmenu_list"><a href="#" class="topmenu_link partners_link">Партнерам</a></li>
-                    <li class="topmenu_list"><a href="#" class="topmenu_link faq_link">Faq</a></li>
-                    <li class="topmenu_list"><a href="#" class="topmenu_link contact_link">Контакты</a></li>
-                  </ul><!-- topmenu END -->
-                </div><!-- navbar_topmenu END -->
-              </div><!-- col-lg-10 END -->
-              <!-- col-lg-2 -->
-              <div class="col-sm-offset-2 col-sm-4 col-md-offset-0 col-md-3 col-lg-2 navbar_search-wrap">
-                <!-- navbar-form -->
-                <form class="navbar_search">
-                  <input type="text" class="form-control navbar_input" placeholder="ПОИСК" value="">
-                </form><!-- navbar-form END -->
-              </div><!-- col-lg-2 END -->
-            </div><!-- row END -->
-          </div><!-- navbar_block END-->
-        </nav><!-- navbar END -->	
-      </div><!-- header END -->
-      
+                <div class="col-xs-8 col-md-7">
+                  <p class="contacts_text">Общие вопросы:</p>
+                </div> 
+                <div class="col-xs-4 col-md-5">
+                  <p class="contacts_date">info@ritz.ru</p>
+                </div> 
+              </div>
+              <div class="row">
+                <div class="col-xs-8 col-md-7">
+                  <p class="contacts_text">Коммерческий отдел:</p>
+                </div> 
+                <div class="col-xs-4 col-md-5">
+                  <p class="contacts_date">sales@ritz.ru</p>
+                </div> 
+              </div>
+              <div class="row">
+                <div class="col-xs-8 col-md-7">
+                  <p class="contacts_text">Отдел поставок:</p>
+                </div> 
+                <div class="col-xs-4 col-md-5">
+                  <p class="contacts_date">snab@ritz.ru</p>
+                </div> 
+              </div>
+            </div><!-- col-lg-4 END-->
+            <!-- col-lg-4 -->
+            <div class="col-sm-6 col-md-4 col-lg-4 header_col adress">
+              <p class="contacts_text"><span class="contacts_date">г. Томск, Кузовлевский тракт 6/2</span></p>
+              <p class="contacts_text contacts_text-margin">Часы работы: <span class="contacts_text-worktime">Пн-Пт 9-18 ч. | Обед: 13-14</span></p>
+              <a href="#" class="contacts_link">Как проехать?</a>
+            </div><!-- col-lg-4 END -->
+          </div><!-- row END -->
+        </div><!-- col-lg-10 END -->          
+      </div>
+    </div>
+    <!-- navbar -->	
+    <nav class="navbar header_navbar">
+      <!-- navbar_block -->
+      <div class="container navbar_block">
+        <!-- row -->
+        <div class="row navbar_row">
+          <!-- col-lg-10 -->
+          <div class="col-sm-6 col-md-9 col-lg-10">
+            <!-- navbar-header -->
+            <div class="navbar-header navbar_menu">
+              <button class="navbar-toggle navbar_btn btn">меню</button>
+            </div><!-- navbar-header END -->
+            <!-- navbar_topmenu -->
+            <div class="collapse navbar-collapse navbar_topmenu" id="navbar_topmenu">
+              <!-- topmenu -->
+              <ul class="nav navbar-nav topmenu">
+                <!-- topmenu_product -->
+                <li class="topmenu_list">
+                  <a class="topmenu_link dropdown_title" href="#">
+                    <span class="dropdown_title-text">Продукция</span>
+                  </a>
+                </li><!-- topmenu_product END -->
+                <li class="topmenu_list"><a href="#" class="topmenu_link aboutcompany_link">О компании</a></li>
+                <li class="topmenu_list"><a href="#" class="topmenu_link guarantee_link">Гарантии</a></li>
+                <li class="active topmenu_list"><a href="#" class="topmenu_link news_link">Новости</a></li>
+                <li class="topmenu_list"><a href="#" class="topmenu_link partners_link">Партнерам</a></li>
+                <li class="topmenu_list"><a href="#" class="topmenu_link faq_link">Faq</a></li>
+                <li class="topmenu_list"><a href="#" class="topmenu_link contact_link">Контакты</a></li>
+              </ul><!-- topmenu END -->
+            </div><!-- navbar_topmenu END -->
+          </div><!-- col-lg-10 END -->
+          <!-- col-lg-2 -->
+          <div class="col-sm-offset-2 col-sm-4 col-md-offset-0 col-md-3 col-lg-2 navbar_search-wrap">
+            <!-- navbar-form -->
+            <form class="navbar_search">
+              <input type="text" class="form-control navbar_input" placeholder="ПОИСК" value="">
+            </form><!-- navbar-form END -->
+          </div><!-- col-lg-2 END -->
+        </div><!-- row END -->
+      </div><!-- navbar_block END-->
+    </nav><!-- navbar END -->	
+  </div><!-- header END -->
   
-      <!-- productcard -->
-      <div class="container-fluid productcard">
-        <!-- mainnav -->
-        <div class="mainnav">
-          <!-- mainnav_block -->
-          <div class="container mainnav_block">
-            <!-- mainnav_body -->
-            <ol class="breadcrumb mainnav_body">
-              <li class="mainnav_list"><a href="#" class="mainnav_link">Главная</a></li>
-              <li class="mainnav_list"><a href="#" class="mainnav_link">Проекты</a></li>
-              <li class="mainnav_list active">Оборудование для ремонта пассажирских вагонов</li>
-            </ol><!-- mainnav_body END -->
-          </div><!-- mainnav_block END-->
-        </div><!-- mainnav END -->
-        <div class="container productcard_top">
-          <h1 class="romb_title-small productcard_title">Oборудование для ремонта пассажирских вагонов </h1>
-          <div class="row">
-            <div class="col-lg-6">
-              <img src="img/product_card/product_card_item_1920_1.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="col-lg-6 productcard_review">
-              <p class="productcard_text">Региональный инновационно технологичский центр предлагает создание участков "под ключ" (изготовление и поставка оборудования, расходуемых материалов; монтаж и запуск оборудования; обучение персонала, сервисное обслуживание в течении 12 месяцев) с передачей высокоэффективных ресурсосберегающих технологий.</p>
-              <a href="" class="productcard_link">Смотреть характеристики...</a>
-              <button class="btn productcard_btn">Узнать цену</button>
-            </div>
-          </div>
+  <!-- productcard -->
+  <div class="container-fluid productcard">
+    <!-- mainnav -->
+    <div class="mainnav">
+      <!-- mainnav_block -->
+      <div class="container mainnav_block">
+        <!-- mainnav_body -->
+        <ol class="breadcrumb mainnav_body">
+          <li class="mainnav_list"><a href="#" class="mainnav_link">Главная</a></li>
+          <li class="mainnav_list"><a href="#" class="mainnav_link">Проекты</a></li>
+          <li class="mainnav_list active">Оборудование для ремонта пассажирских вагонов</li>
+        </ol><!-- mainnav_body END -->
+      </div><!-- mainnav_block END-->
+    </div><!-- mainnav END -->
+    <div class="container productcard_top">
+      <h1 class="romb_title-small productcard_title">Oборудование для ремонта пассажирских вагонов </h1>
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/product_card/product_card_item_1920_1.jpg" alt="" class="img-responsive">
         </div>
-        <!-- productcard_controls-wrap -->
-        <div class="container-fluid productcard_controls-wrap">
-          <!-- productcard_controls -->
-          <div class="container productcard_controls">
-            <button class="btn productcard_pills productcard_pills-active" data-filter="worktype_lathe">Характеристики</button>
-            <button class="btn productcard_pills" data-filter="worktype_estimate">Комплект поставки</button>
-            <button class="btn productcard_pills" data-filter="worktype_documents">Документы</button>
-            <button class="btn productcard_pills" data-filter="worktype_shipping">Доставка</button>
-            <button class="btn productcard_pills" data-filter="worktype_payment">Оплата</button>
-          </div><!-- productcard_controls END -->
-        </div><!--productcard_controls-wrap END -->
-        <!-- pills_content-wrap -->
-        <div class="container-fluid pills_content-wrap">
-          <!-- pills_content -->
-          <div class="container pills_content">
-            <!-- worktype_lathe -->
-            <div id="worktype_lathe" class="filter worktype_lathe">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th class="table_title">№</th>
-                    <th class="table_title">Характеристика</th>
-                    <th class="table_title">Значение</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="table_number">1</td>
-                    <td class="table_data">Занимаемая площадь</td>
-                    <td class="table_data">10 м²</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">2</td>
-                    <td class="table_data">Номинальная мощность</td>
-                    <td class="table_data">40 кВт</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">3</td>
-                    <td class="table_data">Номинальное напряжение</td>
-                    <td class="table_data">380 В</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">4</td>
-                    <td class="table_data">Сварочный ток</td>
-                    <td class="table_data">500 А</td>
-                  </tr>
-                  <tr> 
-                    <td class="table_number">5</td>
-                    <td class="table_data">Размеры восстанавливаемых деталей: длина</td>
-                    <td class="table_data">до 2000 мм</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">6</td>
-                    <td class="table_data">Размеры восстанавливаемых деталей: диаметр</td>
-                    <td class="table_data">60-300 мм</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div><!-- worktype_lathe END-->
-            <!-- worktype_estimate-->
-            <div id="worktype_estimate" class="filter filter_noactive worktype_estimate">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th class="table_title">№</th>
-                    <th class="table_title">НАИМЕНОВАНИЕ</th>
-                    <th class="table_title">КОЛ-ВО ШТУК</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="table_number">1</td>
-                    <td class="table_data">Установка приготовления гидрата окиси бария </td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">2</td>
-                    <td class="table_data">Установка регенерации электролита</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">3</td>
-                    <td class="table_data">Дозатор электролита</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">4</td>
-                    <td class="table_data">Бак-накопитель электролита подлежащего регенерации</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">5</td>
-                    <td class="table_data">Установка доводки электролита</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">6</td>
-                    <td class="table_data">Установка розлива электролита</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">7</td>
-                    <td class="table_data">Бак для технической воды</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">8</td>
-                    <td class="table_data">Дистиллятор электрический А 2029.00.00</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">9</td>
-                    <td class="table_data">Монтажный комплект в составе</td>
-                    <td class="table_data">1</td>
-                  </tr>
-                  <tr>
-                    <td class="table_number">10</td>
-                    <td class="table_data">Указатель прозрачности электролита</td>
-                    <td class="table_data">600</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div><!-- worktype_estimate END-->
-            <!-- worktype_documents-->
-            <div id="worktype_documents" class="filter filter_noactive worktype_documents">
-              <ul class="documents_file-list">
-                <li class="documents_file"><a href="#" class="files files-place">Схема участка</a></li>
-                <li class="documents_file"><a href="#" class="files files-pdf">Документ</a></li>
-                <li class="documents_file"><a href="#" class="files files-zip">Документ 2</a></li>
-              </ul>
-            </div><!-- worktype_documents-->
-            <!-- worktype_shipping-->
-            <div id="worktype_shipping" class="filter filter_noactive worktype_shipping">
-              <p class="shipping_text">При покупке товара в нашей компании, мы доставим груз в любой город России и стран СНГ.Отдел логистики просчитает наиболее выгодный для Вас вариант, как по стоимости, так и по срокам.
-                При желании Вы можете забрать оборудование со склада в г. Томске самостоятельно.</p>
-            </div><!-- worktype_shipping END-->
-            <!-- worktype_payment-->
-            <div id="worktype_payment" class="filter filter_noactive worktype_payment">
-              <p class="payment-text">Оплата производится по ранее выставленному счету на р/счет Поставщика.Все отгрузочные документы передаем вместе с оборудованием при отправке груза, либо по почте.</p>
-            </div><!-- worktype_payment END-->
-          </div><!-- pills_content END -->
-        </div><!-- pills_content-wrap END -->       
-      </div><!-- productcard END -->
-      
-  
-	<!-- footer -->
+        <div class="col-lg-6 productcard_review">
+          <p class="productcard_text">Региональный инновационно технологичский центр предлагает создание участков "под ключ" (изготовление и поставка оборудования, расходуемых материалов; монтаж и запуск оборудования; обучение персонала, сервисное обслуживание в течении 12 месяцев) с передачей высокоэффективных ресурсосберегающих технологий.</p>
+          <a href="" class="productcard_link">Смотреть характеристики...</a>
+          <button class="btn productcard_btn">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <!-- productcard_controls-wrap -->
+    <div class="container-fluid productcard_controls-wrap">
+      <!-- productcard_controls -->
+      <div class="container productcard_controls">
+        <button class="btn productcard_pills productcard_pills-active" data-filter="worktype_lathe">Характеристики</button>
+        <button class="btn productcard_pills" data-filter="worktype_estimate">Комплект поставки</button>
+        <button class="btn productcard_pills" data-filter="worktype_documents">Документы</button>
+        <button class="btn productcard_pills" data-filter="worktype_shipping">Доставка</button>
+        <button class="btn productcard_pills" data-filter="worktype_payment">Оплата</button>
+      </div><!-- productcard_controls END -->
+    </div><!--productcard_controls-wrap END -->
+    <!-- pills_content-wrap -->
+    <div class="container-fluid pills_content-wrap">
+      <!-- pills_content -->
+      <div class="container pills_content">
+        <!-- worktype_lathe -->
+        <div id="worktype_lathe" class="filter worktype_lathe">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="table_title">№</th>
+                <th class="table_title">Характеристика</th>
+                <th class="table_title">Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table_number">1</td>
+                <td class="table_data">Занимаемая площадь</td>
+                <td class="table_data">10 м²</td>
+              </tr>
+              <tr>
+                <td class="table_number">2</td>
+                <td class="table_data">Номинальная мощность</td>
+                <td class="table_data">40 кВт</td>
+              </tr>
+              <tr>
+                <td class="table_number">3</td>
+                <td class="table_data">Номинальное напряжение</td>
+                <td class="table_data">380 В</td>
+              </tr>
+              <tr>
+                <td class="table_number">4</td>
+                <td class="table_data">Сварочный ток</td>
+                <td class="table_data">500 А</td>
+              </tr>
+              <tr> 
+                <td class="table_number">5</td>
+                <td class="table_data">Размеры восстанавливаемых деталей: длина</td>
+                <td class="table_data">до 2000 мм</td>
+              </tr>
+              <tr>
+                <td class="table_number">6</td>
+                <td class="table_data">Размеры восстанавливаемых деталей: диаметр</td>
+                <td class="table_data">60-300 мм</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- worktype_lathe END-->
+        <!-- worktype_estimate-->
+        <div id="worktype_estimate" class="filter filter_noactive worktype_estimate">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="table_title">№</th>
+                <th class="table_title">НАИМЕНОВАНИЕ</th>
+                <th class="table_title">КОЛ-ВО ШТУК</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table_number">1</td>
+                <td class="table_data">Установка приготовления гидрата окиси бария </td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">2</td>
+                <td class="table_data">Установка регенерации электролита</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">3</td>
+                <td class="table_data">Дозатор электролита</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">4</td>
+                <td class="table_data">Бак-накопитель электролита подлежащего регенерации</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">5</td>
+                <td class="table_data">Установка доводки электролита</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">6</td>
+                <td class="table_data">Установка розлива электролита</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">7</td>
+                <td class="table_data">Бак для технической воды</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">8</td>
+                <td class="table_data">Дистиллятор электрический А 2029.00.00</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">9</td>
+                <td class="table_data">Монтажный комплект в составе</td>
+                <td class="table_data">1</td>
+              </tr>
+              <tr>
+                <td class="table_number">10</td>
+                <td class="table_data">Указатель прозрачности электролита</td>
+                <td class="table_data">600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- worktype_estimate END-->
+        <!-- worktype_documents-->
+        <div id="worktype_documents" class="filter filter_noactive worktype_documents">
+          <ul class="documents_file-list">
+            <li class="documents_file"><a href="#" class="files files-place">Схема участка</a></li>
+            <li class="documents_file"><a href="#" class="files files-pdf">Документ</a></li>
+            <li class="documents_file"><a href="#" class="files files-zip">Документ 2</a></li>
+          </ul>
+        </div><!-- worktype_documents-->
+        <!-- worktype_shipping-->
+        <div id="worktype_shipping" class="filter filter_noactive worktype_shipping">
+          <p class="shipping_text">При покупке товара в нашей компании, мы доставим груз в любой город России и стран СНГ.Отдел логистики просчитает наиболее выгодный для Вас вариант, как по стоимости, так и по срокам.
+            При желании Вы можете забрать оборудование со склада в г. Томске самостоятельно.</p>
+        </div><!-- worktype_shipping END-->
+        <!-- worktype_payment-->
+        <div id="worktype_payment" class="filter filter_noactive worktype_payment">
+          <p class="payment-text">Оплата производится по ранее выставленному счету на р/счет Поставщика.Все отгрузочные документы передаем вместе с оборудованием при отправке груза, либо по почте.</p>
+        </div><!-- worktype_payment END-->
+      </div><!-- pills_content END -->
+    </div><!-- pills_content-wrap END -->       
+  </div><!-- productcard END -->
+  <!-- footer -->
 	<footer class="container-fluid footer">
 		<!-- navbar_footer -->
 		<nav class="navbar navbar_footer">
@@ -422,11 +396,11 @@
 							<!-- footernavbar -->
 							<div class="col-sm-12 footernavbar">
 								<ul class="footermenu">
-									<li class="footermenu_list"><a class="footermenu_link" href="#">О компании ><i class="icon_arrow"></i></a></li>
-									<li class="footermenu_list"><a class="footermenu_link" href="#">Продукция ><i class="icon_arrow"></i></a></li>
-									<li class="footermenu_list"><a class="footermenu_link" href="#">Проекты ><i class="icon_arrow"></i></a></li>
-									<li class="footermenu_list"><a class="footermenu_link" href="#">Услуги ><i class="icon_arrow"></i></a></li>
-									<li class="footermenu_list"><a class="footermenu_link" href="#">Пресс-центр ><i class="icon_arrow"></i></a></li>
+									<li class="footermenu_list"><a class="footermenu_link" href="#">О компании <i class="icon_arrow"></i></a></li>
+									<li class="footermenu_list"><a class="footermenu_link" href="#">Продукция <i class="icon_arrow"></i></a></li>
+									<li class="footermenu_list"><a class="footermenu_link" href="#">Проекты <i class="icon_arrow"></i></a></li>
+									<li class="footermenu_list"><a class="footermenu_link" href="#">Услуги <i class="icon_arrow"></i></a></li>
+									<li class="footermenu_list"><a class="footermenu_link" href="#">Пресс-центр <i class="icon_arrow"></i></a></li>
 								</ul>
 							</div><!-- footernavbar END -->
 							<!-- col-sm-12 -->
@@ -522,8 +496,6 @@
 			</div><!-- footer_bottom END -->
 		</nav><!-- navbar_footer END -->
 	</footer><!-- footer END -->
-
-
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},
@@ -531,6 +503,5 @@
 		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 	</script>
 	<!-- Optimized loading JS END -->
-
 </body>
 </html>
