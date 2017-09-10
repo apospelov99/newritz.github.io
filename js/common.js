@@ -207,17 +207,17 @@ $(function() {
   });
   */
   //slider response_img-wrap END
+
   //slider slider_worker
-  /*
   $(".slider_worker").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    //fade: true,
+    fade: true,
     nextArrow: '.control_next-worker',
-    prevArrow: '.control_prev-worker',  
+    prevArrow: '.control_prev-worker',
+    adaptiveHeight: true  
   });
-  */
   //slider slider_worker END
 
   $(".projectdetails_slider").slick({
