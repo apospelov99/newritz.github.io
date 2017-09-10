@@ -125,7 +125,6 @@ $(function() {
   //slider press_list END
 
   //slider slider_executives
-  /*
   $('.slider_executives').slick({
     infinite: true,
     slidesToShow: 3,
@@ -134,21 +133,7 @@ $(function() {
     prevArrow: '.control_prev-executives',
     responsive: [
       {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -156,7 +141,6 @@ $(function() {
       }
     ]
   });
-  */
   //slider slider_executives END
 
   //slider projects_gallery-company
