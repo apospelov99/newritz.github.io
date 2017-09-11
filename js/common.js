@@ -6,6 +6,55 @@ $(function() {
 	});
   //vacancy collapse END
   
+  //media screen js
+  /*
+  enquire
+    .register("(min-width: 1024px) and (max-width: 1279px)", {
+        match : function() {
+          alert("1024");
+          $(".projects_gallery").slick(settingProjectGallery2);
+        },
+        unmatch : function() {
+          $(".projects_gallery").slick('unslick');
+      }
+    })
+    .register("(min-width: 768px) and (max-width: 1023px)", {
+        match : function() {
+          alert("768");
+          $(".projects_gallery").slick(settingProjectGallery2);
+        },
+        unmatch : function() {
+          $(".projects_gallery").slick('unslick');
+      }
+    })
+    .register("screen and (max-width: 767px)", {
+        match : function() {
+          alert("320");
+          $(".projects_gallery").slick(settingProjectGallery);
+        },
+        unmatch : function() {
+          $(".projects_gallery").slick('unslick');
+      }
+    });
+
+    var settingProjectGallery = {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    }
+    var settingProjectGallery2 = {
+        infinite: true,
+        rows: 3,
+        slidesToScroll: 1,
+        slidesPerRow: 1,
+      }
+      */
+  //media screen js END
+    
+
+
+
+
   //products
   $('.products_btn').on("click", function() {
     $('.products_btn').removeClass('products_btn-active');
@@ -85,23 +134,6 @@ $(function() {
   // equal column height END 
   
   //slider press_list
-  /*
-  $('.press_list').slick({
-    infinite: true,
-    rows: 3,
-    slidesToScroll: 1,
-    slidesPerRow: 1,
-    nav: true,
-    nextArrow: '.arrow_left-presscenter',
-    prevArrow: '.arrow_right-presscenter',
-    responsive: [
-      {
-        breakpoint: 1279,
-        settings: unslick
-      },
-    ]
-  });
-  */
   $(".press_list").slick({
     infinite: true,
     rows: 3,
@@ -121,7 +153,6 @@ $(function() {
       }, 
     ]  
   });
-
   //slider press_list END
 
   //slider slider_executives
