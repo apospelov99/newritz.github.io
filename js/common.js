@@ -219,8 +219,7 @@ $(function() {
   //slider slider_patents END
 
   //slider slider_response
-    /*
-    $(".slider_response").slick({
+  $(".slider_response").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -229,10 +228,8 @@ $(function() {
     nextArrow: '.control_next-response',
     prevArrow: '.control_prev-response',  
   });
-  */
-  //slider slider_response END
-  //slider response_img-wrap
-  /*
+  
+    //slider response_img-wrap
   $(".response_img-wrap").slick({
     infinite: true,
     arrows: false,
@@ -241,8 +238,8 @@ $(function() {
     fade: true,
     asNavFor: '.slider_response'
   });
-  */
-  //slider response_img-wrap END
+    //slider response_img-wrap END
+  //slider slider_response END
 
   //slider slider_worker
   $(".slider_worker").slick({
