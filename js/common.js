@@ -129,8 +129,10 @@ $(function() {
   $(".offer_col .offer_text").matchHeight();
   $(".thumbnail_wrap").matchHeight();
   $(".presspage_thumbnail").matchHeight();
+  $(".presspage_thumbnail .presspage_textwrap").matchHeight();
   $(".footer .footer_col").matchHeight();
   $(".presscenter .press_testslider").matchHeight();
+  $(".aboutcompany_col").matchHeight();
   // equal column height END 
   
   //slider press_list
