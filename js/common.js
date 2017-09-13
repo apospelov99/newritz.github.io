@@ -134,6 +134,47 @@ $(function() {
   $(".presscenter .press_testslider").matchHeight();
   $(".aboutcompany_col").matchHeight();
   // equal column height END 
+
+//test js-timeline
+
+//test js-timeline END
+
+$('.js-timeline').Timeline({
+  autoplay: true,
+  //dotsClass: ".history_timeline-ul",
+});
+
+/*
+//test slider
+$('.history_timeline-ul').slick({
+  infinite: false,
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  focusOnSelect: true,
+  asNavFor: '.timeline_text-test',
+  nextArrow: '.control_prev-test',
+  prevArrow: '.control_next-test',
+  },
+);
+$(".timeline_text-test").slick({
+  infinite: false,
+  arrows: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: true,
+  asNavFor: '.history_timeline-ul'
+});
+//test slider END
+ 
+  $('.control_prev-test').on("click", function() {
+    $('.history_timeline-ul .slick-slide').removeClass('activenext');
+    $('.history_timeline-ul .slick-current').next().addClass('activenext');
+  });
+  $('.control_next-test').on("click", function() {
+    $('.history_timeline-ul .history_timeline-li').removeClass('activenext');
+    $('.history_timeline-ul .slick-current').prev().addClass('activenext');
+  });
+*/
   
   //slider press_list
   $(".press_list").slick({
