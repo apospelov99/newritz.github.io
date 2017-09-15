@@ -1,7 +1,6 @@
 $(function() {
 
-  //GLOBAL VARABLES ANS FUNCTION
-  
+//GLOBAL VARABLES ANS FUNCTION
   // company / history timeline
   function controlTimelineNext(control) {
     $(control).on('click', function(){
@@ -42,32 +41,27 @@ $(function() {
     nextArrow: '.control_prev-timeline',
     prevArrow: '.control_next-timeline'
   };
+
   function historyTimeline(){
     $('.history_timeline-li').on('click', function(){
-      //метод заменяет ссылку на действие
-      //event.preventDefault();
       $('.history_timeline-li').removeClass('timeline_selected timeline_active timeline_active-prev');
       $(this).addClass('timeline_active');
       $(this).prevAll('.history_timeline-li').addClass('timeline_selected');
       $(this).prev('.history_timeline-li').addClass('timeline_active-prev');
-      //показываем текст контент
+
       var timelineDate = $(this).data('date');
       $('.timeline_text').removeClass('timeline_text-active');
       $('.timeline_text[data-date="'+ timelineDate +'"]').addClass('timeline_text-active');
-      //показываем текст контент END
-      //показываем текст контент
+
       var periodEnd = $('.timeline_text-active').data('date');
       var periodStart = $('.history_timeline-li[data-date="'+ periodEnd +'"]').prev().text();
       $('.timeline_period .period_end').text(periodEnd);
       $('.timeline_period .period_start').text(periodStart);
-      //показываем текст контент END
     });
   };
-  
   // company / history timeline END
   
-  //slider press_list
-
+  //index /slider press_list
   var sliderPressMainWrap = {
     infinite: true,
     slidesToShow: 1,
@@ -103,15 +97,25 @@ $(function() {
       }, 
     ]  
   };
-  //slider press_list END
-  //GLOBAL VARABLES ANS FUNCTION END
+  //index /slider press_list END
 
+  //index /slider projects
+  var settingProjectGallery = {
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: '.control_next-mainprojects',
+    prevArrow: '.control_prev-mainprojects',
+  };
+  //index /slider projects END
+//GLOBAL VARABLES ANS FUNCTION END
 
+// START function for all media screen
   //history timeline
   historyTimeline();
   $('.timeline_list').slick(sliderTimelineList);
   //history timeline END
-
+  
   //index press list slider 
   $(".press_main-wrap").slick(sliderPressMainWrap);
   $(".press_list").slick(sliderPressList);
@@ -124,33 +128,27 @@ $(function() {
     $(this).closest('.vacancy_item-top').next('.vacancy_specification').toggle();
 	});
   //vacancy collapse END
+// START function for all media screen END
   
-  
-  
-  //MEDIA SCREEN JS 
+//MEDIA SCREEN JS 
   enquire
   .register("screen and (min-width: 1280px)", {
     match : function() {
       //alert("1024");
-      $(".projects_gallery").slick(settingProjectGallery2);
     },
     unmatch : function() {
-      $(".projects_gallery").slick('unslick');
     }
   })
   .register("screen and (min-width: 1024px) and (max-width: 1279px)", {
     match : function() {
       //alert("1024");
-      $(".projects_gallery").slick(settingProjectGallery2);
     },
     unmatch : function() {
-      $(".projects_gallery").slick('unslick');
     }
   })
   .register("screen and (min-width: 768px) and (max-width: 1023px)", {
     match : function() {
       //alert("768");
-      $(".projects_gallery").slick(settingProjectGallery2);
       //company history timeline
       $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
       controlTimelinePrev('.control_prev-timeline');
@@ -164,7 +162,6 @@ $(function() {
       //index press list slider
     },
     unmatch : function() {
-      $(".projects_gallery").slick('unslick');
       //index press list slider
       $(".press_list").slick('unslick');
       //index press list slider
@@ -180,31 +177,29 @@ $(function() {
       $('.timeline_contorl-mobile').before($('.timeline_period'));
       $('.control_next-timeline').prependTo($('.timeline_contorl-mobile'));
       //company history timeline END
-      //$(".projects_gallery").slick(settingProjectGallery);
+      //index presscenter control
+      $('.slider_control-presscenter').appendTo($('.presscenter_body'));
+      //index presscenter control END
+      $(".projects_gallery").slick(settingProjectGallery);
+      //company
+        //company slider control patents
+      $(".company .slider_control-projects").appendTo($(".projects_block"));
+        //company slider control patents END
+        //company slider control patents
+      $(".company .slider_control-patents").appendTo($(".patents_block"));
+        //company slider control patents END
+      //company END
+
     },
     unmatch : function() {
       $(".projects_gallery").slick('unslick');
     }
   });
-  //MEDIA SCREEN JS END
-
-    var settingProjectGallery = {
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-    var settingProjectGallery2 = {
-        infinite: true,
-        rows: 3,
-        slidesToScroll: 1,
-        slidesPerRow: 1,
-    };
-
-
+//MEDIA SCREEN JS END
 
 
   //media screen js END
-    
+  
 
 
 
