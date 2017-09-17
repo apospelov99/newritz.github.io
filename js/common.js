@@ -128,6 +128,14 @@ $(function() {
     $(this).closest('.vacancy_item-top').next('.vacancy_specification').toggle();
 	});
   //vacancy collapse END
+
+  //company response/ fancybox
+  $().fancybox({
+		selector : '[data-fancybox="images"]',
+		thumbs   : false,
+    hash     : false,
+	});
+  //company response/ fancybox END
 // START function for all media screen END
   
 //MEDIA SCREEN JS 
