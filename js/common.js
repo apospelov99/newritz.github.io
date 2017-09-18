@@ -133,20 +133,26 @@ $(function() {
   .register("screen and (min-width: 1280px)", {
     match : function() {
       //alert("1024");
+      //products
+      pillsCollapseOff('.products_btn','.products_row');
+      btnCollapse('.products_btn');
+      //products END
     },
     unmatch : function() {
     }
   })
   .register("screen and (min-width: 1024px) and (max-width: 1279px)", {
     match : function() {
-      //alert("1024");
+      //products
+      pillsCollapseOff('.products_btn','.products_row');
+      btnCollapse('.products_btn');
+      //products END     
     },
     unmatch : function() {
     }
   })
   .register("screen and (min-width: 768px) and (max-width: 1023px)", {
     match : function() {
-      //alert("768");
       //company history timeline
       $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
       controlTimelinePrev('.control_prev-timeline');
@@ -156,12 +162,23 @@ $(function() {
       //company history timeline END
       //index press list slider
       $(".press_list").slick(sliderPressListMobile);
-      //index press list slider
+      //index press list slider END
+      //products
+      pillsCollapseOff('.products_btn','.products_row');
+      btnCollapse('.products_btn');
+      //products END
+      //servicedetails
+      pillsCollapseOff('.servicedetails_pills');
+      tabsCollapse('.servicedetails_pills');
+      //servicedetails END
+      //alert("768");
     },
     unmatch : function() {
       //index press list slider
       $(".press_list").slick('unslick');
-      //index press list slider
+      //index press list slider END
+      //products
+      //products END   
     }
   })
   .register("screen and (max-width: 767px)", {
@@ -186,6 +203,15 @@ $(function() {
       $(".company .slider_control-patents").appendTo($(".patents_block"));
         //company slider control patents END
       //company END
+      //products
+      btnCollapseOff('.products_btn');
+      pillsCollapse('.products_btn');
+      //products END
+      //servicedetails
+      btnCollapseOff('.servicedetails_pills');
+      tabsPillsCollapse('.servicedetails_pills');
+      //servicedetails END
+      
 
     },
     unmatch : function() {
@@ -195,25 +221,27 @@ $(function() {
 //MEDIA SCREEN JS END
   //media screen js END
   //products
+  /*
   $('.products_btn').on("click", function() {
     $('.products_btn').removeClass('products_btn-active');
     var productFilter = $(this).attr('data-filter');   
     
     $('.filter').not('.' + productFilter).hide('3000');
     
-    if (window.matchMedia('(min-width: 768px)').matches){
-      $('.filter').filter('.' + productFilter).show('1000');
-    } else {
-      $(this).after($('.filter'));
-      if ($('.filter').filter('.' + productFilter).is(':visible')) {
-        $(this).removeClass('products_btn-active');
-        $('.filter').filter('.' + productFilter).hide('1000');
-      } else {
+      if (window.matchMedia('(min-width: 768px)').matches){
         $('.filter').filter('.' + productFilter).show('1000');
-        $(this).addClass('products_btn-active');  
+      } else {
+        $(this).after($('.filter'));
+        if ($('.filter').filter('.' + productFilter).is(':visible')) {
+          $(this).removeClass('products_btn-active');
+          $('.filter').filter('.' + productFilter).hide('1000');
+        } else {
+          $('.filter').filter('.' + productFilter).show('1000');
+          $(this).addClass('products_btn-active');  
+        }
       }
-    }
   });
+  */
   //products END
   ///productcard
     $('.productcard_pills').on("click", function() {
@@ -237,6 +265,7 @@ $(function() {
     });
   ///productcard END
   ///servicedetails
+    /*
     $('.servicedetails_pills').on("click", function() {
       $('.servicedetails_pills').removeClass('servicedetails_pills-active');
       var productFilter = $(this).attr('data-filter');   
@@ -256,6 +285,89 @@ $(function() {
         }
       }
     });
+    */
+    function tabsCollapse(tabs){
+      var activeTabs = tabs;
+      $(activeTabs).on("click", function() {
+        //activeTabs = (activeTabs.slice(1) + '-active');
+        //alert(activeTabs);
+        //$(activeTabs).removeClass(activeTabs);
+        $(activeTabs).removeClass(activeTabs.slice(1) + '-active');
+        var productFilter = $(this).attr('data-filter');   
+        $('.filter').not('.' + productFilter).addClass('filter_noactive');
+        $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
+      });
+    };
+
+    function tabsCollapseOff(tabs){
+      var activeTabs = tabs;
+      $(activeTabs).off("click");
+    };
+    
+    function tabsPillsCollapse(tabs) {
+      var activeTabs = tabs;
+      $(activeTabs).on("click", function() {
+        $(activeTabs).removeClass(activeTabs.slice(1) + '-active');
+        var productFilter = $(this).attr('data-filter');   
+        $('.filter').not('.' + productFilter).addClass('filter_noactive');
+        $(this).after($('.filter'));
+          if ($('.filter').filter('.' + productFilter).is(':visible')) {
+            $(this).removeClass(activeTabs.slice(1) + '-active');
+            $('.filter').filter('.' + productFilter).addClass('filter_noactive');
+          } else {
+            $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
+            $(this).addClass(activeTabs.slice(1) + '-active');  
+          }
+      });
+    }
+
+
+
+    //pillsCollapse('.products_btn');
+
+    function btnCollapse(button){
+      var activeButton = button;
+        $(activeButton).on("click", function() {      
+          //alert("WOW");
+          $(activeButton).removeClass(activeButton + '-active');
+          var productFilter = $(this).attr('data-filter');
+          $('.filter').not('.' + productFilter).hide('3000');
+          $('.filter').filter('.' + productFilter).show('1000');  
+        });
+      };
+
+    function btnCollapseOff(button){
+      var activeButton = button;
+      $(activeButton).off("click");
+    };
+    
+    function pillsCollapse(pills){
+      var activePills = pills;
+      $(activePills).on("click", function() {      
+        //alert("WOW");
+        $(activePills).removeClass(activePills + '-active');
+        var productFilter = $(this).attr('data-filter');
+        $('.filter').not('.' + productFilter).hide('3000');
+        $(this).after($('.filter'));
+        if ($('.filter').filter('.' + productFilter).is(':visible')) {
+          //alert('visible');
+          $(this).removeClass(activePills + '-active');
+          $('.filter').filter('.' + productFilter).hide('1000');
+        } else {
+          //alert('not visible');
+          $('.filter').filter('.' + productFilter).show('1000');
+          $(this).addClass(activePills + '-active');  
+          }
+        });
+      };
+
+    function pillsCollapseOff(pills, pillsContent){
+      var activePills = pills;
+      var pillsContainer = pillsContent;
+      $(activePills).off("click");
+      $('.filter').appendTo(pillsContainer);
+    };
+
   ///servicedetails END
   // equal column height
   $(".direction_thumbnail").matchHeight();
