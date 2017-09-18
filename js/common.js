@@ -60,7 +60,6 @@ $(function() {
     });
   };
   // company / history timeline END
-  
   //index /slider press_list
   var sliderPressMainWrap = {
     infinite: true,
@@ -70,7 +69,6 @@ $(function() {
     nextArrow: '.control_next-presscenter',
     prevArrow: '.control_prev-presscenter',
   };
-
   var sliderPressList = {
     infinite: true,
     rows: 3,
@@ -84,7 +82,6 @@ $(function() {
       }, 
     ]  
   };
-  
   var sliderPressListMobile = {
     infinite: true,
     rows: 1,
@@ -98,7 +95,6 @@ $(function() {
     ]  
   };
   //index /slider press_list END
-
   //index /slider projects
   var settingProjectGallery = {
     infinite: true,
@@ -109,26 +105,21 @@ $(function() {
   };
   //index /slider projects END
 //GLOBAL VARABLES ANS FUNCTION END
-
 // START function for all media screen
   //history timeline
   historyTimeline();
   $('.timeline_list').slick(sliderTimelineList);
   //history timeline END
-  
   //index press list slider 
   $(".press_main-wrap").slick(sliderPressMainWrap);
   $(".press_list").slick(sliderPressList);
   //index press list slider END breakpoint(unslick) include in 1279
-  
-  
   //vacancy collapse
   $('.vacancy_click').on("click", function() {
     $(this).toggleClass('vacancy_click-active');
     $(this).closest('.vacancy_item-top').next('.vacancy_specification').toggle();
 	});
   //vacancy collapse END
-
   //company response/ fancybox
   $().fancybox({
 		selector : '[data-fancybox="images"]',
@@ -137,7 +128,6 @@ $(function() {
 	});
   //company response/ fancybox END
 // START function for all media screen END
-  
 //MEDIA SCREEN JS 
   enquire
   .register("screen and (min-width: 1280px)", {
@@ -164,7 +154,6 @@ $(function() {
       $('.timeline_contorl-mobile').before($('.timeline_period'));
       $('.control_next-timeline').prependTo($('.timeline_contorl-mobile'));
       //company history timeline END
-
       //index press list slider
       $(".press_list").slick(sliderPressListMobile);
       //index press list slider
@@ -204,14 +193,7 @@ $(function() {
     }
   });
 //MEDIA SCREEN JS END
-
-
   //media screen js END
-  
-
-
-
-
   //products
   $('.products_btn').on("click", function() {
     $('.products_btn').removeClass('products_btn-active');
@@ -233,7 +215,6 @@ $(function() {
     }
   });
   //products END
-  
   ///productcard
     $('.productcard_pills').on("click", function() {
       $('.productcard_pills').removeClass('productcard_pills-active');
@@ -276,7 +257,6 @@ $(function() {
       }
     });
   ///servicedetails END
-
   // equal column height
   $(".direction_thumbnail").matchHeight();
   $(".gallery_col").matchHeight();
@@ -291,8 +271,6 @@ $(function() {
   $(".presscenter .press_testslider").matchHeight();
   $(".aboutcompany_col").matchHeight();
   // equal column height END 
-  
-
   //slider slider_executives
   $('.slider_executives').slick({
     infinite: true,
@@ -311,7 +289,6 @@ $(function() {
     ]
   });
   //slider slider_executives END
-
   //slider projects_gallery-company
   $(".projects_gallery-company").slick({
     infinite: true,
@@ -355,7 +332,6 @@ $(function() {
     ]  
   });
   //slider slider_patents END
-
   //slider slider_response
   $(".slider_response").slick({
     infinite: true,
@@ -366,7 +342,6 @@ $(function() {
     nextArrow: '.control_next-response',
     prevArrow: '.control_prev-response',  
   });
-  
     //slider response_img-wrap
   $(".response_img-wrap").slick({
     infinite: true,
@@ -378,7 +353,6 @@ $(function() {
   });
     //slider response_img-wrap END
   //slider slider_response END
-
   //slider slider_worker
   $(".slider_worker").slick({
     infinite: true,
@@ -390,7 +364,6 @@ $(function() {
     adaptiveHeight: true  
   });
   //slider slider_worker END
-
   $(".projectdetails_slider").slick({
     rows: 1,
     infinite: true,
@@ -417,9 +390,4 @@ $(function() {
       } 
     ]  
   });
-
-
-
-
-
 });
