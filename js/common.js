@@ -208,7 +208,7 @@ $(function() {
       pillsCollapse('.products_btn');
       //products END
       //servicedetails
-      btnCollapseOff('.servicedetails_pills');
+      tabsCollapseOff('.servicedetails_pills');
       tabsPillsCollapse('.servicedetails_pills');
       //servicedetails END
       
@@ -321,6 +321,12 @@ $(function() {
       });
     }
 
+    function tabsPillsCollapse(pills, pillsContent){
+      var activePills = pills;
+      var pillsContainer = pillsContent;
+      $(activePills).off("click");
+      $('.filter').appendTo(pillsContainer);
+    };   
 
 
     //pillsCollapse('.products_btn');
