@@ -236,6 +236,9 @@ $(function() {
       tabsCollapseOff('.productcard_pills');
       tabsPillsCollapse('.productcard_pills');
       //productcard END
+      //company
+      //$('.response_img-wrap').after($('.resposnse_body'));
+      //company END
     },
     unmatch : function() {
       $(".projects_gallery").slick('unslick');
