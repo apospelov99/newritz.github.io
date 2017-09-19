@@ -353,9 +353,6 @@ $(function() {
       $('.filter').appendTo(pillsContainer);
     };   
 
-
-    //pillsCollapse('.products_btn');
-
     function btnCollapse(button){
       var activeButton = button;
         $(activeButton).on("click", function() {      
