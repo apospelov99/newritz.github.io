@@ -60,7 +60,9 @@ $(function() {
     });
   };
   // company / history timeline END
+
   //index /slider press_list
+  /*
   var sliderPressMainWrap = {
     infinite: true,
     slidesToShow: 1,
@@ -94,6 +96,7 @@ $(function() {
       }, 
     ]  
   };
+  */
   //index /slider press_list END
   //index /slider projects
   var settingProjectGallery = {
@@ -104,6 +107,7 @@ $(function() {
     prevArrow: '.control_prev-mainprojects',
   };
   //index /slider projects END
+
 //GLOBAL VARABLES ANS FUNCTION END
 // START function for all media screen
   //history timeline
@@ -111,8 +115,8 @@ $(function() {
   $('.timeline_list').slick(sliderTimelineList);
   //history timeline END
   //index press list slider 
-  $(".press_main-wrap").slick(sliderPressMainWrap);
-  $(".press_list").slick(sliderPressList);
+  //$(".press_main-wrap").slick(sliderPressMainWrap);
+  //$(".press_list").slick(sliderPressList);
   //index press list slider END breakpoint(unslick) include in 1279
   //vacancy collapse
   $('.vacancy_click').on("click", function() {
@@ -178,7 +182,7 @@ $(function() {
       $('.control_next-timeline').prependTo($('.timeline_contorl-mobile'));
       //company history timeline END
       //index press list slider
-      $(".press_list").slick(sliderPressListMobile);
+      //$(".press_list").slick(sliderPressListMobile);
       //index press list slider END
       //products
       pillsCollapseOff('.products_btn','.products_row');
@@ -411,8 +415,8 @@ $(function() {
   $(".thumbnail_wrap").matchHeight();
   $(".presspage_thumbnail").matchHeight();
   $(".presspage_thumbnail .presspage_textwrap").matchHeight();
+  $(".presscenter .press-col").matchHeight();
   $(".footer .footer_col").matchHeight();
-  $(".presscenter .press_testslider").matchHeight();
   $(".aboutcompany_col").matchHeight();
   // equal column height END 
   //slider slider_executives
