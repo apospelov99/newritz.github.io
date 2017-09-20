@@ -328,6 +328,7 @@ $(function() {
         var productFilter = $(this).attr('data-filter');   
         $('.filter').not('.' + productFilter).addClass('filter_noactive');
         $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
+        $(this).addClass(activeTabs.slice(1) + '-active');
       });
     };
     
