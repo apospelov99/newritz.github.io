@@ -417,10 +417,12 @@ $(function() {
   $(".presspage_thumbnail").matchHeight();
   $(".presspage_thumbnail .presspage_textwrap").matchHeight();
   $(".presscenter .press-col").matchHeight();
+  $(".company_executives .executive_profile").matchHeight();
   $(".footer .footer_col").matchHeight();
   $(".aboutcompany_col").matchHeight();
   // equal column height END 
   //slider slider_executives
+
   $('.slider_executives').slick({
     infinite: true,
     slidesToShow: 3,
@@ -437,6 +439,7 @@ $(function() {
       }
     ]
   });
+  
   //slider slider_executives END
   //slider projects_gallery-company
   $(".projects_gallery-company").slick({
