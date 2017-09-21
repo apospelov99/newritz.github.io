@@ -119,10 +119,18 @@ $(function() {
   //$(".press_list").slick(sliderPressList);
   //index press list slider END breakpoint(unslick) include in 1279
   //vacancy collapse
+  $('.vacancy_item-top').on("click", function() {
+    $(this).find('.vacancy_click').toggleClass('vacancy_click-active');
+    $(this).next('.vacancy_specification').toggle();
+	});
+  //vacancy collapse END
+  //vacancy collapse
+  /*
   $('.vacancy_click').on("click", function() {
     $(this).toggleClass('vacancy_click-active');
     $(this).closest('.vacancy_item-top').next('.vacancy_specification').toggle();
-	});
+  });
+  */
   //vacancy collapse END
   //company response/ fancybox
   $().fancybox({
