@@ -27,12 +27,14 @@ $(function() {
     slidesToScroll: 1,
     nextArrow: '.control_prev-timeline',
     prevArrow: '.control_next-timeline',
+    /*
     responsive: [
       {
         breakpoint: 1023,
         settings: "unslick"
       }
     ] 
+    */
   };
   var sliderTimelineTextWrap = {
     infinite: false,
@@ -112,7 +114,7 @@ $(function() {
 // START function for all media screen
   //history timeline
   historyTimeline();
-  $('.timeline_list').slick(sliderTimelineList);
+  //$('.timeline_list').slick(sliderTimelineList);
   //history timeline END
   //index press list slider 
   //$(".press_main-wrap").slick(sliderPressMainWrap);
@@ -145,6 +147,9 @@ $(function() {
   enquire
   .register("screen and (min-width: 1280px)", {
     match : function() {
+      //company history timeline  
+      $('.timeline_list').slick(sliderTimelineList);
+      //company history timeline END
       //alert("1024");
       //products
       pillsCollapseOff('.products_btn','.products_row');
@@ -164,6 +169,10 @@ $(function() {
   })
   .register("screen and (min-width: 1024px) and (max-width: 1279px)", {
     match : function() {
+      //company history timeline
+      $('.timeline_list').slick(sliderTimelineList);
+      $('.timeline_text-wrap').delay(2800).slick('unslick');   
+      //company history timeline END
       //products
       pillsCollapseOff('.products_btn','.products_row');
       btnCollapse('.products_btn');
@@ -178,16 +187,21 @@ $(function() {
       //productcard END 
     },
     unmatch : function() {
+      //company history timeline
+      //$('.timeline_control-mobile').after($('.timeline_period'));
+      //$('.control_next-timeline').prependTo($('.timeline_control-left'));   
+      //company history timeline END   
     }
   })
   .register("screen and (min-width: 768px) and (max-width: 1023px)", {
     match : function() {
       //company history timeline
-      $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
+      $('.timeline_list').slick('unslick');
+      $('.timeline_text-wrap').delay(2800).slick(sliderTimelineTextWrap);
       controlTimelinePrev('.control_prev-timeline');
       controlTimelineNext('.control_next-timeline');
-      $('.timeline_contorl-mobile').before($('.timeline_period'));
-      $('.control_next-timeline').prependTo($('.timeline_contorl-mobile'));
+      $('.timeline_control-mobile').before($('.timeline_period'));
+      $('.control_next-timeline').prependTo($('.timeline_control-mobile'));
       //company history timeline END
       //index press list slider
       //$(".press_list").slick(sliderPressListMobile);
@@ -211,7 +225,14 @@ $(function() {
       $(".press_list").slick('unslick');
       //index press list slider END
       //products
-      //products END   
+      //products END
+      //company history timeline
+      $('.timeline_text-wrap').slick('unslick');      
+      //company history timeline
+      $('.timeline_control-mobile').after($('.timeline_period'));
+      $('.control_next-timeline').prependTo($('.timeline_control-left'));   
+      //company history timeline END   
+      //company history timeline END   
     }
   })
   .register("screen and (max-width: 767px)", {
@@ -221,8 +242,8 @@ $(function() {
       $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
       controlTimelinePrev('.control_prev-timeline');
       controlTimelineNext('.control_next-timeline');
-      $('.timeline_contorl-mobile').before($('.timeline_period'));
-      $('.control_next-timeline').prependTo($('.timeline_contorl-mobile'));
+      $('.timeline_control-mobile').before($('.timeline_period'));
+      $('.control_next-timeline').prependTo($('.timeline_control-mobile'));
       //company history timeline END
       //index presscenter control
       $('.slider_control-presscenter').appendTo($('.presscenter_body'));
@@ -254,6 +275,11 @@ $(function() {
     },
     unmatch : function() {
       $(".projects_gallery").slick('unslick');
+      //company history timeline   
+      //$('.timeline_control-mobile').after($('.timeline_period'));
+      //$('.control_next-timeline').prependTo($('.timeline_control-left'));
+      //$('.timeline_text-wrap').slick('unslick');     
+      //company history timeline END   
     }
   });
 //MEDIA SCREEN JS END
