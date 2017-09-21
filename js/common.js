@@ -119,8 +119,8 @@ $(function() {
   //$(".press_list").slick(sliderPressList);
   //index press list slider END breakpoint(unslick) include in 1279
   //vacancy collapse
-  $('.vacancy_item-top').on("click", function() {
-    $(this).find('.vacancy_click').toggleClass('vacancy_click-active');
+  $('.vacancy_btn').on("click", function() {
+    $(this).toggleClass('vacancy_btn-active');
     $(this).next('.vacancy_specification').toggle();
 	});
   //vacancy collapse END
