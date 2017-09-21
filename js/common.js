@@ -446,6 +446,7 @@ $(function() {
   $(".project_thumbnail").matchHeight();
   $(".project_thumbnail .gallery_title").matchHeight();
   $(".project_thumbnail .clientcards_gallery").matchHeight();
+  $(".offer_col .offer_link").matchHeight();
   $(".offer_col .offer_text").matchHeight();
   $(".thumbnail_wrap").matchHeight();
   $(".presspage_thumbnail").matchHeight();
