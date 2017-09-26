@@ -551,9 +551,19 @@ $(function() {
     fade: true,
     nextArrow: '.control_next-worker',
     prevArrow: '.control_prev-worker',
-    adaptiveHeight: true  
+    adaptiveHeight: true,
+    asNavFor: '.workers_mainslider'  
   });
   //slider slider_worker END
+  //index /workers_mainslider
+  $(".workers_mainslider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true  
+  });
+  //index /workers_mainslider END
+  //projectdetails_slider
   $(".projectdetails_slider").slick({
     rows: 1,
     infinite: true,
@@ -580,6 +590,7 @@ $(function() {
       } 
     ]  
   });
+  //projectdetails_slider END
 
   //productcard /productcard_link smooth scroll
   $('.productcard_link').on('click', function(event) {
