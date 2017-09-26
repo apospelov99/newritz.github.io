@@ -452,6 +452,7 @@ $(function() {
   $(".presspage_thumbnail").matchHeight();
   $(".presspage_thumbnail .presspage_link").matchHeight();
   $(".presscenter .press-col").matchHeight();
+  $(".presscenter .press_col-main").matchHeight();
   $(".company_executives .executive_profile").matchHeight();
   $(".footer .footer_col").matchHeight();
   $(".aboutcompany_col").matchHeight();
