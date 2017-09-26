@@ -450,7 +450,7 @@ $(function() {
   $(".offer_col .offer_text").matchHeight();
   $(".thumbnail_wrap").matchHeight();
   $(".presspage_thumbnail").matchHeight();
-  $(".presspage_thumbnail .presspage_textwrap").matchHeight();
+  $(".presspage_thumbnail .presspage_link").matchHeight();
   $(".presscenter .press-col").matchHeight();
   $(".company_executives .executive_profile").matchHeight();
   $(".footer .footer_col").matchHeight();
