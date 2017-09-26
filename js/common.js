@@ -268,6 +268,8 @@ $(function() {
       //productcard
       tabsCollapseOff('.productcard_pills');
       tabsPillsCollapse('.productcard_pills');
+      //$('.productcard .productcard_pills').removeClass('productcard_pills-active');
+      $('.productcard .productcard_pills-active').after($('.filter_active'));
       //productcard END
       //company
       //$('.response_img-wrap').after($('.resposnse_body'));
@@ -355,13 +357,11 @@ $(function() {
     function tabsCollapse(tabs){
       var activeTabs = tabs;
       $(activeTabs).on("click", function() {
-        //activeTabs = (activeTabs.slice(1) + '-active');
-        //alert(activeTabs);
-        //$(activeTabs).removeClass(activeTabs);
+        $('.filter').removeClass('filter_active');
         $(activeTabs).removeClass(activeTabs.slice(1) + '-active');
         var productFilter = $(this).attr('data-filter');   
         $('.filter').not('.' + productFilter).addClass('filter_noactive');
-        $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
+        $('.filter').filter('.' + productFilter).removeClass('filter_noactive').addClass('filter_active');
         $(this).addClass(activeTabs.slice(1) + '-active');
       });
     };
@@ -371,6 +371,7 @@ $(function() {
       $(activeTabs).off("click");
     };
 
+    
     function tabsPillsCollapse(pills){
       var activePills = pills;
       $(activePills).on("click", function(){
@@ -387,7 +388,8 @@ $(function() {
         }
       });
     };
-   
+
+
     function tabsPillsCollapseOff(pills, pillsContent){
       var activePills = pills;
       var pillsContainer = pillsContent;
@@ -578,4 +580,24 @@ $(function() {
       } 
     ]  
   });
+
+  //productcard /productcard_link smooth scroll
+  $('.productcard_link').on('click', function(event) {
+    var linkTarget = $(".productcard_pills[data-filter='worktype_lathe']");
+    var hash = this.hash;
+    //console.log(newtest);
+    if (linkTarget.hasClass('productcard_pills-active')) {
+      //event.preventDefault();
+      $('html, body').animate({ scrollTop: $(hash).offset().top}, 1000, function(){
+        window.location.hash = hash;
+      });
+    } else {
+      linkTarget.click();
+      $('html, body').animate({ scrollTop: $(hash).offset().top}, 1000, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+  //productcard /productcard_link smooth scroll END
+
 });
