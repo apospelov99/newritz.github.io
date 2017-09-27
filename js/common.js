@@ -3,6 +3,7 @@ $(function() {
 //GLOBAL VARABLES ANS FUNCTION
   // company / history timeline
   function controlTimelineNext(control) {
+    $(control).addClass('controlTimelineNext-active');
     $(control).on('click', function(){
       //var periodEnd = $('.timeline_text-wrap .slick-current').prev().find('.timeline_text').data('date');
       var periodEnd = $('.timeline_text-wrap .slick-current').find('.timeline_text').data('date');
@@ -13,10 +14,12 @@ $(function() {
   };
 
   function controlTimelineNextOff(control) {
+    $(control).removeClass('controlTimelineNext-active');
     $(control).off('click');
   };
   
   function controlTimelinePrev(control) {
+    $(control).addClass('controlTimelinePrev-active');
     $(control).on('click', function(){
       var periodEnd = $('.timeline_text-wrap .slick-current').next().find('.timeline_text').data('date');
       var periodStart = $('.history_timeline-li[data-date="'+ periodEnd +'"]').prev().text();
@@ -26,6 +29,7 @@ $(function() {
   };
   
   function controlTimelinePrevOff(control) {
+    $(control).removeClass('controlTimelinePrev-active');
     $(control).off('click'); 
   };
 
@@ -36,14 +40,6 @@ $(function() {
     slidesToScroll: 1,
     nextArrow: '.control_prev-timeline',
     prevArrow: '.control_next-timeline',
-    /*
-    responsive: [
-      {
-        breakpoint: 1023,
-        settings: "unslick"
-      }
-    ] 
-    */
   };
   var sliderTimelineTextWrap = {
     infinite: false,
@@ -76,43 +72,6 @@ $(function() {
   };
   // company / history timeline END
 
-  //index /slider press_list
-  /*
-  var sliderPressMainWrap = {
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: '.press_list',
-    nextArrow: '.control_next-presscenter',
-    prevArrow: '.control_prev-presscenter',
-  };
-  var sliderPressList = {
-    infinite: true,
-    rows: 3,
-    //slidesToShow: 3,
-    slidesToScroll: 1,
-    slidesPerRow: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: "unslick" 
-      }, 
-    ]  
-  };
-  var sliderPressListMobile = {
-    infinite: true,
-    rows: 1,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: "unslick"
-      }, 
-    ]  
-  };
-  */
-  //index /slider press_list END
   //index /slider projects
   var settingProjectGallery = {
     infinite: true,
@@ -127,7 +86,6 @@ $(function() {
 // START function for all media screen
   //history timeline
   historyTimeline();
-  //$('.timeline_list').slick(sliderTimelineList);
   //history timeline END
   //index press list slider 
   //$(".press_main-wrap").slick(sliderPressMainWrap);
@@ -160,8 +118,25 @@ $(function() {
   enquire
   .register("screen and (min-width: 1280px)", {
     match : function() {
-      //company history timeline  
-      $('.timeline_list').slick(sliderTimelineList);
+      //new timeline
+      if ($('.control_next-timeline').hasClass('controlTimelineNext-active')) {
+        controlTimelineNextOff('.control_next-timeline');
+      }
+      if ($('.control_prev-timeline').hasClass('controlTimelinePrev-active')) {
+        controlTimelinePrevOff('.control_prev-timeline');
+      }
+
+      $('.control_next-timeline').prependTo($('.timeline_control-left'));
+      $('.timeline_control-mobile').after($('.timeline_period'));
+      
+      if ($('.timeline_text-wrap').hasClass('slick-initialized')) {
+        $('.timeline_text-wrap').slick('unslick');
+      }
+      
+      if ( !$('.timeline_list').hasClass('slick-initialized')) {
+        $('.timeline_list').slick(sliderTimelineList);
+      } 
+      //new timeline END
       //company history timeline END
       //alert("1024");
       //products
@@ -182,20 +157,27 @@ $(function() {
   })
   .register("screen and (min-width: 1024px) and (max-width: 1279px)", {
     match : function() {
-      //company history timeline
-      //$('.timeline_text-wrap').slick('unslick');
-      /*
-      $('.timeline_text-wrap').on('init', function(event, slick){
-        // let's do this after we init the banner slider
-        
-        console.log('unslick 1024');
-        $(this).slick('unslick');
-      });
-      */
-      controlTimelinePrevOff('.control_prev-timeline');
-      controlTimelineNextOff('.control_next-timeline');
+      //new timeline
+      if ($('.control_next-timeline').hasClass('controlTimelineNext-active')) {
+        controlTimelineNextOff('.control_next-timeline');
+      }
+      if ($('.control_prev-timeline').hasClass('controlTimelinePrev-active')) {
+        controlTimelinePrevOff('.control_prev-timeline');
+      }
+      $('.control_next-timeline').prependTo($('.timeline_control-left'));
+      $('.timeline_control-mobile').after($('.timeline_period'));  
+      
+      if ($('.timeline_text-wrap').hasClass('slick-initialized')) {
+        $('.timeline_text-wrap').slick('unslick');
+      }
+      if (!$('.timeline_list').hasClass('slick-initialized')) {
+        $('.timeline_list').slick(sliderTimelineList);
+      } 
+      //new timeline END
+      //controlTimelinePrevOff('.control_prev-timeline');
+      //controlTimelineNextOff('.control_next-timeline');
       //$('.timeline_text-wrap').unslick();   
-      $('.timeline_list').slick(sliderTimelineList);
+      //$('.timeline_list').slick(sliderTimelineList);
       //company history timeline END
       //products
       pillsCollapseOff('.products_btn','.products_row');
@@ -211,38 +193,22 @@ $(function() {
       //productcard END 
     },
     unmatch : function() {
-      //company history timeline
-      //$('.timeline_control-mobile').after($('.timeline_period'));
-      //$('.control_next-timeline').prependTo($('.timeline_control-left'));   
-      //company history timeline END   
     }
   })
   .register("screen and (min-width: 768px) and (max-width: 1023px)", {
     match : function() {
-      //company history timeline
-      if (typeof  $('.timeline_list').slick !== 'undefined') {
-        $('.timeline_list').slick('unslick');
-        console.log();
-      }
-      /*
-      $('.timeline_list').on('init', function(event, slick){
-        // let's do this after we init the banner slider
-        
-        console.log('unslick 768');
-        $(this).slick('unslick');
-      });
-      */
-      $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
-      /*
-      $('.timeline_list').slick('unslick');
-      controlTimelinePrev('.control_prev-timeline');
-      controlTimelineNext('.control_next-timeline');
+      //new timeline
       $('.timeline_control-mobile').before($('.timeline_period'));
       $('.control_next-timeline').prependTo($('.timeline_control-mobile'));
-      */
-      //company history timeline END
-      //index press list slider
-      //$(".press_list").slick(sliderPressListMobile);
+      if ($('.timeline_list').hasClass('slick-initialized')) {
+        $('.timeline_list').slick('unslick');
+      } 
+      if (!$('.timeline_text-wrap').hasClass('slick-initialized')) {
+        $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
+      }
+      controlTimelinePrev('.control_prev-timeline');
+      controlTimelineNext('.control_next-timeline');
+      //new timeline END
       //index press list slider END
       //products
       pillsCollapseOff('.products_btn','.products_row');
@@ -262,23 +228,20 @@ $(function() {
       //index press list slider
       $(".press_list").slick('unslick');
       //index press list slider END
-      //products
-      //products END
-      //company history timeline
-      //$('.timeline_text-wrap').slick('unslick');      
-      //company history timeline
-      $('.timeline_control-mobile').after($('.timeline_period'));
-      $('.control_next-timeline').prependTo($('.timeline_control-left'));   
-      //company history timeline END   
-      //company history timeline END   
     }
   })
   .register("screen and (max-width: 767px)", {
     match : function() {
-      //alert("320");
+      //new timeline
+      if ($('.timeline_list').hasClass('slick-initialized')) {
+        $('.timeline_list').slick('unslick');
+      } 
+      if (!$('.timeline_text-wrap').hasClass('slick-initialized')) {
+        $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
+      }
+      //new timeline END
       //company
         //company history timeline
-      $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
       controlTimelinePrev('.control_prev-timeline');
       controlTimelineNext('.control_next-timeline');
       $('.timeline_control-mobile').before($('.timeline_period'));
@@ -315,16 +278,10 @@ $(function() {
     },
     unmatch : function() {
       $(".projects_gallery").slick('unslick');
-      //company history timeline   
-      //$('.timeline_control-mobile').after($('.timeline_period'));
-      //$('.control_next-timeline').prependTo($('.timeline_control-left'));
-      //$('.timeline_text-wrap').slick('unslick');     
-      //company history timeline END   
     }
   });
 //MEDIA SCREEN JS END
   //media screen js END
-
     function tabsCollapse(tabs){
       var activeTabs = tabs;
       $(activeTabs).on("click", function() {
@@ -342,7 +299,6 @@ $(function() {
       $(activeTabs).off("click");
     };
 
-    
     function tabsPillsCollapse(pills){
       var activePills = pills;
       $(activePills).on("click", function(){
@@ -360,7 +316,6 @@ $(function() {
       });
     };
 
-
     function tabsPillsCollapseOff(pills, pillsContent){
       var activePills = pills;
       var pillsContainer = pillsContent;
@@ -371,7 +326,6 @@ $(function() {
     function btnCollapse(button){
       var activeButton = button;
         $(activeButton).on("click", function() {      
-          //alert("WOW");
           $(activeButton).removeClass(activeButton.slice(1) + '-active');
           var productFilter = $(this).attr('data-filter');
           $('.filter').not('.' + productFilter).hide('3000');
@@ -388,17 +342,14 @@ $(function() {
     function pillsCollapse(pills){
       var activePills = pills;
       $(activePills).on("click", function() {      
-        //alert("WOW");
         $(activePills).removeClass(activePills.slice(1) + '-active');
         var productFilter = $(this).attr('data-filter');
         $('.filter').not('.' + productFilter).hide('3000');
         $(this).after($('.filter'));
         if ($('.filter').filter('.' + productFilter).is(':visible')) {
-          //alert('visible');
           $(this).removeClass(activePills.slice(1) + '-active');
           $('.filter').filter('.' + productFilter).hide('1000');
         } else {
-          //alert('not visible');
           $('.filter').filter('.' + productFilter).show('1000');
           $(this).addClass(activePills.slice(1) + '-active');  
           }
@@ -562,14 +513,11 @@ $(function() {
     ]  
   });
   //projectdetails_slider END
-
   //productcard /productcard_link smooth scroll
   $('.productcard_link').on('click', function(event) {
     var linkTarget = $(".productcard_pills[data-filter='worktype_lathe']");
     var hash = this.hash;
-    //console.log(newtest);
     if (linkTarget.hasClass('productcard_pills-active')) {
-      //event.preventDefault();
       $('html, body').animate({ scrollTop: $(hash).offset().top}, 1000, function(){
         window.location.hash = hash;
       });
