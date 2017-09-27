@@ -11,6 +11,10 @@ $(function() {
       $('.timeline_period .period_start').text(periodStart);
     });
   };
+
+  function controlTimelineNextOff(control) {
+    $(control).off('click');
+  };
   
   function controlTimelinePrev(control) {
     $(control).on('click', function(){
@@ -20,6 +24,11 @@ $(function() {
       $('.timeline_period .period_start').text(periodStart);
     }); 
   };
+  
+  function controlTimelinePrevOff(control) {
+    $(control).off('click'); 
+  };
+
   
   var sliderTimelineList = {
     infinite: false,
@@ -60,6 +69,10 @@ $(function() {
       $('.timeline_period .period_end').text(periodEnd);
       $('.timeline_period .period_start').text(periodStart);
     });
+  };
+
+  function historyTimelineOff(){
+    $('.history_timeline-li').off('click');
   };
   // company / history timeline END
 
@@ -170,8 +183,19 @@ $(function() {
   .register("screen and (min-width: 1024px) and (max-width: 1279px)", {
     match : function() {
       //company history timeline
+      //$('.timeline_text-wrap').slick('unslick');
+      /*
+      $('.timeline_text-wrap').on('init', function(event, slick){
+        // let's do this after we init the banner slider
+        
+        console.log('unslick 1024');
+        $(this).slick('unslick');
+      });
+      */
+      controlTimelinePrevOff('.control_prev-timeline');
+      controlTimelineNextOff('.control_next-timeline');
+      //$('.timeline_text-wrap').unslick();   
       $('.timeline_list').slick(sliderTimelineList);
-      $('.timeline_text-wrap').delay(2800).slick('unslick');   
       //company history timeline END
       //products
       pillsCollapseOff('.products_btn','.products_row');
@@ -196,12 +220,26 @@ $(function() {
   .register("screen and (min-width: 768px) and (max-width: 1023px)", {
     match : function() {
       //company history timeline
+      if (typeof  $('.timeline_list').slick !== 'undefined') {
+        $('.timeline_list').slick('unslick');
+        console.log();
+      }
+      /*
+      $('.timeline_list').on('init', function(event, slick){
+        // let's do this after we init the banner slider
+        
+        console.log('unslick 768');
+        $(this).slick('unslick');
+      });
+      */
+      $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
+      /*
       $('.timeline_list').slick('unslick');
-      $('.timeline_text-wrap').delay(2800).slick(sliderTimelineTextWrap);
       controlTimelinePrev('.control_prev-timeline');
       controlTimelineNext('.control_next-timeline');
       $('.timeline_control-mobile').before($('.timeline_period'));
       $('.control_next-timeline').prependTo($('.timeline_control-mobile'));
+      */
       //company history timeline END
       //index press list slider
       //$(".press_list").slick(sliderPressListMobile);
@@ -227,7 +265,7 @@ $(function() {
       //products
       //products END
       //company history timeline
-      $('.timeline_text-wrap').slick('unslick');      
+      //$('.timeline_text-wrap').slick('unslick');      
       //company history timeline
       $('.timeline_control-mobile').after($('.timeline_period'));
       $('.control_next-timeline').prependTo($('.timeline_control-left'));   
@@ -238,18 +276,14 @@ $(function() {
   .register("screen and (max-width: 767px)", {
     match : function() {
       //alert("320");
-      //company history timeline
+      //company
+        //company history timeline
       $('.timeline_text-wrap').slick(sliderTimelineTextWrap);
       controlTimelinePrev('.control_prev-timeline');
       controlTimelineNext('.control_next-timeline');
       $('.timeline_control-mobile').before($('.timeline_period'));
       $('.control_next-timeline').prependTo($('.timeline_control-mobile'));
-      //company history timeline END
-      //index presscenter control
-      $('.slider_control-presscenter').appendTo($('.presscenter_body'));
-      //index presscenter control END
-      $(".projects_gallery").slick(settingProjectGallery);
-      //company
+        //company history timeline END
         //company slider control patents
       $(".company .slider_control-projects").appendTo($(".projects_block"));
         //company slider control patents END
@@ -257,6 +291,10 @@ $(function() {
       $(".company .slider_control-patents").appendTo($(".patents_block"));
         //company slider control patents END
       //company END
+      //index presscenter control
+      $('.slider_control-presscenter').appendTo($('.presscenter_body'));
+      //index presscenter control END
+      $(".projects_gallery").slick(settingProjectGallery);
       //products
       btnCollapseOff('.products_btn');
       pillsCollapse('.products_btn');
@@ -286,74 +324,7 @@ $(function() {
   });
 //MEDIA SCREEN JS END
   //media screen js END
-  //products
-  /*
-  $('.products_btn').on("click", function() {
-    $('.products_btn').removeClass('products_btn-active');
-    var productFilter = $(this).attr('data-filter');   
-    
-    $('.filter').not('.' + productFilter).hide('3000');
-    
-      if (window.matchMedia('(min-width: 768px)').matches){
-        $('.filter').filter('.' + productFilter).show('1000');
-      } else {
-        $(this).after($('.filter'));
-        if ($('.filter').filter('.' + productFilter).is(':visible')) {
-          $(this).removeClass('products_btn-active');
-          $('.filter').filter('.' + productFilter).hide('1000');
-        } else {
-          $('.filter').filter('.' + productFilter).show('1000');
-          $(this).addClass('products_btn-active');  
-        }
-      }
-  });
-  */
-  //products END
-  ///productcard
-  /*
-    $('.productcard_pills').on("click", function() {
-      $('.productcard_pills').removeClass('productcard_pills-active');
-      var productFilter = $(this).attr('data-filter');   
-      
-      $('.filter').not('.' + productFilter).addClass('filter_noactive');
-      
-      if (window.matchMedia('(min-width: 768px)').matches){
-        $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
-      } else {
-        $(this).after($('.filter'));
-        if ($('.filter').filter('.' + productFilter).is(':visible')) {
-          $(this).removeClass('productcard_pills-active');
-          $('.filter').filter('.' + productFilter).addClass('filter_noactive');
-        } else {
-          $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
-          $(this).addClass('productcard_pills-active');  
-        }
-      }
-    });
-    */
-  ///productcard END
-  ///servicedetails
-    /*
-    $('.servicedetails_pills').on("click", function() {
-      $('.servicedetails_pills').removeClass('servicedetails_pills-active');
-      var productFilter = $(this).attr('data-filter');   
-      
-      $('.filter').not('.' + productFilter).addClass('filter_noactive');
-      
-      if (window.matchMedia('(min-width: 768px)').matches){
-        $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
-      } else {
-        $(this).after($('.filter'));
-        if ($('.filter').filter('.' + productFilter).is(':visible')) {
-          $(this).removeClass('servicedetails_pills-active');
-          $('.filter').filter('.' + productFilter).addClass('filter_noactive');
-        } else {
-          $('.filter').filter('.' + productFilter).removeClass('filter_noactive');
-          $(this).addClass('servicedetails_pills-active');  
-        }
-      }
-    });
-    */
+
     function tabsCollapse(tabs){
       var activeTabs = tabs;
       $(activeTabs).on("click", function() {
