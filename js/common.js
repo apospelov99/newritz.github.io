@@ -377,7 +377,10 @@ $(function() {
   $(".presspage_thumbnail .presspage_link").matchHeight();
   $(".presscenter .press-col").matchHeight();
   $(".presscenter .press_col-main").matchHeight();
-  $(".company_executives .executive_profile").matchHeight();
+  $(".company_executives .profile_name").matchHeight();
+  $(".company_executives .profile_position").matchHeight();
+  $(".company_executives .profile_phone").matchHeight();
+  $(".company_executives .profile_email").matchHeight();
   $(".footer .footer_col").matchHeight();
   $(".aboutcompany_col").matchHeight();
   // equal column height END 
