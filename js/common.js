@@ -248,14 +248,14 @@ $(function() {
       $('.control_next-timeline').prependTo($('.timeline_control-mobile'));
         //company history timeline END
         //company slider control patents
-      $(".company .slider_control-projects").appendTo($(".projects_block"));
+      //$(".company .slider_control-projects").appendTo($(".projects_block"));
         //company slider control patents END
         //company slider control patents
-      $(".company .slider_control-patents").appendTo($(".patents_block"));
+      //$(".company .slider_control-patents").appendTo($(".patents_block"));
         //company slider control patents END
       //company END
       //index presscenter control
-      $('.slider_control-presscenter').appendTo($('.presscenter_body'));
+      //$('.slider_control-presscenter').appendTo($('.presscenter_body'));
       //index presscenter control END
       $(".projects_gallery").slick(settingProjectGallery);
       //products
