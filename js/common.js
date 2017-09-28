@@ -485,7 +485,8 @@ $(function() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true  
+    adaptiveHeight: true,
+    asNavFor: '.slider_worker'  
   });
   //index /workers_mainslider END
   //projectdetails_slider
