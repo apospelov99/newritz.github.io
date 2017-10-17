@@ -360,8 +360,8 @@ $(function() {
 	});
   //vacancy collapse END
   //company response/ fancybox
-  $().fancybox({
-		selector : '[data-fancybox="images"]',
+  $(".patents_img-wrap").fancybox({
+		selector : '[data-fancybox="patents"]',
 		thumbs   : false,
     hash     : false,
 	});
@@ -516,6 +516,7 @@ $(function() {
   $(".gallery_col").matchHeight();
   $(".project_thumbnail").matchHeight();
   $(".project_thumbnail .gallery_title").matchHeight();
+  $(".project_thumbnail .thumbnail_title").matchHeight();
   $(".project_thumbnail .clientcards_gallery").matchHeight();
   $(".offer_col .offer_link").matchHeight();
   $(".offer_col .offer_text").matchHeight();
